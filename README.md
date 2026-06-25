@@ -1,4 +1,4 @@
-# Explore Application Modernization Accelerator to modernize bWebSphere applications
+# Explore Application Modernization Accelerator to modernize WebSphere applications
 
 THIS LAB IS CURRENTLY UNDER DEVELOPMENT
 
