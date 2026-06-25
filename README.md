@@ -114,7 +114,7 @@ Application Modernization Accelerator(AMA) is already installed.
     3. Start AMA if not already started
 
             cd ~/usr/IBM/application-modernization-accelerator-local-*
-            ./launch
+            ./launch.sh
 
         In the menu, select the option **5** to start AMA.
         Wait unti the AMA URL is displayed
