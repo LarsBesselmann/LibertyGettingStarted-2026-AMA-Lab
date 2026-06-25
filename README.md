@@ -84,9 +84,69 @@ The following software hsa been installed:
     - The Applicatin Modernization Accelerator Development Tools (AMA Dev Tools)
 
 
-## 5. Execute Lab Tasks
+## 5. Explore Application Modernization Accelerator
+In this section, you will explore the main capabilities of Application Modernization Accelerator. You will use the sample data that is shipped with the product. 
 
-### 5.1 Verify the installed software 
+create in AMA a workspace with sample data. This will be used to explain the basic concepts and highlight features like **Visualization** and **Common Code**.
+
+
+### 5.1 Explore the AMA User Interface
+Application Modernization Accelerator(AMA) is already installed. 
+
+1. Let's check if AMA is already started. This can be validated by reviewing if the related podman containers are started. 
+
+    1. Open a terminal by clicking on Activities and selecting terminal.
+
+            <kbd>![Toolbar_terminal](./images/media/Toolbar_terminal.png)</kbd>
+
+        The terminal window opens.  
+
+            <kbd>![Terminal](./images/media/Terminal.png)</kbd>
+
+    2. Check the following command to check which containers are started. 
+
+            podman ps | grep ama
+
+            <kbd>![mvn-v](./images/media/podman-ps.png)</kbd>
+    
+        If AMA is started, the containers amaui, amaserver, amadb and amagraph should be running:
+
+    3. Start AMA if not already started
+
+            cd ~/usr/IBM/application-modernization-accelerator-local-*
+            ./launch
+
+        In the menu, select the option **5** to start AMA.
+        Wait unti the AMA URL is displayed
+
+2. Access the AMA UI
+    1. Open a browser window by clicking on **Activities** and then select the **Firefox** browser icon.
+
+        <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
+
+    2. Access the AMA User Interface via the URL http://localhost:30000
+
+3. 
+
+
+### 5.2 Explore the AMA APIs
+
+Run AMA Discovery Tool
+https://localhost:2220/openapi/ui/
+
+
+curl -k -X 'POST' \
+  'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
+  -H 'accept: */*' \
+  -H 'locale: en' \
+  -H 'workspaceName: sampleData' \
+  -d ''
+
+
+
+## 6. Execute Lab Tasks
+
+### 6.1 Verify the installed software 
 
 1. Open a terminal by clicking on Activities and selecting terminal.
 
@@ -114,7 +174,7 @@ The following software hsa been installed:
 
     The version might be slightly different.
 
-### 5.2 Create the required working directories
+### 6.2 Create the required working directories
 
 1. Create the Student directories and some sub-directories used in the lab with commands:
 
@@ -127,12 +187,12 @@ The following software hsa been installed:
         git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/home/itzuser/Student/backup
 
 
-### 5.3 Assess the WebSphere applications
+### 6.3 Assess the WebSphere applications
 
 The objective of this section is to assess the simple-pharmacy application that has been deployed to a traditional WAS 9 instance.
 
 
-### 5.3.1 Deploy the WebSphere application and test it
+### 6.3.1 Deploy the WebSphere application and test it
 
 The application has not been installed to WAS so far. You will first deploy the application to an eisting WAS ND instance. Then you will test if the application as is works fine or not.
 
@@ -189,22 +249,8 @@ The application has not been installed to WAS so far. You will first deploy the 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
 
 
-### 5.3.2 Introudction how to use AMA
-In this section, you will create in AMA a workspace with sample data. This will be used to explain the basic concepts and highlight features like **Visualization** and **Common Code**.
 
-
-Run AMA Discovery Tool
-https://localhost:2220/openapi/ui/
-
-
-curl -k -X 'POST' \
-  'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
-  -H 'accept: */*' \
-  -H 'locale: en' \
-  -H 'workspaceName: sampleData' \
-  -d ''
-
-### 5.3.3 Create a AMA data collection for the WAS applications
+### 6.3.3 Create a AMA data collection for the WAS applications
 
 
 
@@ -214,17 +260,17 @@ curl -k -X 'POST' \
 
 
 
-### 5.3.2 Assess the applications using AMA
+### 6.3.2 Assess the applications using AMA
 
 
-### 5.3.8 Recap
+### 6.3.8 Recap
 
 Congratulations, you have finished the application assessment part.
 
 **Let’s recap what you did so far.** 
 
 
-### 5.3.9 Troubleshooting
+### 6.3.9 Troubleshooting
 
 You will need the migratin plan in the next section. 
 
@@ -244,15 +290,15 @@ You will need the migratin plan in the next section.
 
 <br>
 
-### 5.4 Use the AMA Dev Tools
+### 6.4 Use the AMA Dev Tools
 
 
-### 5.5 Recap
+### 6.5 Recap
 
 Let’s recap what you did in this part of the lab: 
 
 
-### 6 Lab Cleanup
+### 7 Lab Cleanup
 
 1. Once you are done, make sure that Liberty and Visual Studio Code is not running.
 
