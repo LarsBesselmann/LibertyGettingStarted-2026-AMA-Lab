@@ -87,48 +87,154 @@ The following software hsa been installed:
 ## 5. Explore Application Modernization Accelerator
 In this section, you will explore the main capabilities of Application Modernization Accelerator. You will use the sample data that is shipped with the product. 
 
-### 5.1 Explore the AMA User Interface
-Application Modernization Accelerator(AMA) is already installed. 
+### 5.1 Start AMA
 
-1. Let's check if AMA is already started. This can be validated by reviewing if the related podman containers are started. 
+Application Modernization Accelerator(AMA) is already installed nd typically running. 
 
-    1. Open a terminal by clicking on Activities and selecting terminal.
+Let's check if AMA is already started. This can be validated by reviewing if the related podman containers are started. 
 
-        <kbd>![Toolbar_terminal](./images/media/Toolbar_terminal.png)</kbd>
+1. Open a terminal by clicking on Activities and selecting terminal.
 
-        The terminal window opens.  
+    <kbd>![Toolbar_terminal](./images/media/Toolbar_terminal.png)</kbd>
 
-        <kbd>![Terminal](./images/media/Terminal.png)</kbd>
+    The terminal window opens.  
 
-    2. Check the following command to check which containers are started. 
+    <kbd>![Terminal](./images/media/Terminal.png)</kbd>
 
-            podman ps | grep ama
+    HINT: By detfault, the terminal window has a dark background.
 
-        <kbd>![podman-ps](./images/media/podman-ps.png)</kbd>
-    
-        If AMA is started, the containers amaui, amaserver, amadb and amagraph should be running:
+2. Access the AMA launch script to verify if AMA is started or not
 
-    3. Start AMA if not already started
+        cd ~/usr/IBM/application-modernization-accelerator-local-*
+        ./launch.sh
 
-            cd ~/usr/IBM/application-modernization-accelerator-local-*
-            ./launch.sh
+        
+    Check the status if AMA is started. 
+    If AMA **is available** (see screenshot below), enter **q** to quit the menu and keep AMA running. 
 
-        In the menu, select the option **5** to start AMA.
-        Wait unti the AMA URL is displayed
+    <kbd>![AMA_Launcher](./images/media/AMA_Launcher.png)</kbd>
+        
+    If AMA is **not running** (see screenshot below), enter **5** to start AMA. 
+    <kbd>![AMA_Launcher_stopped](./images/media/AMA_Launcher_stopped.png)</kbd>
+        
+    Wait until AMA has started and the URL is displayed
+    <kbd>![AMA_Launcher_stopped](./images/media/AMA_Launcher_started.png)</kbd>
 
-2. Access the AMA UI
+
+
+### 5.2 Explore the AMA User Interface
+1. Access the AMA UI and create a workspace with sample applications
     1. Open a browser window by clicking on **Activities** and then select the **Firefox** browser icon.
 
         <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
 
     2. Access the AMA User Interface via the URL http://localhost:30000
 
-3. 
+
+        <kbd>![AMA_Initial_Screen](./images/media/AMA_Initial_Screen.png)</kbd>
+    
+
+    3. Click on the button **Create workspace** and enter **tWAS**, select **incluide sample data**, then click on **Create**.
+
+        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS.png)</kbd>
+    
+    4. The workspace will be created.
+        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS_create.png)</kbd>
+    
+    5. Wait until the workspace has been created which can take a minute or so. Finally you will see that the workspace has been created and contains 29 sample applications, 7 databases and 9 queues.
+        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS_created.png)</kbd>
+    
+2. Explore the workspace with the sample applications
+
+    1. CLick on the workspace to open it.
+
+    2. AMA supports three destinations, **Liberty**, **MoRE** and **WebSphere Application Server** (Traditional)
+    
+        <kbd>![AMA_Select_Destination](./images/media/AMA_Select_Destination.png)</kbd>
+    
+    3. Select **Liberty** as destination and click on **Confirm**.
+    
+        <kbd>![AMA_Select_Liberty](./images/media/AMA_Select_Liberty.png)</kbd>
+    
+
+    4. The **Visualization** panel shows all applications and how they relate to each other regarding common databases or queues.
+    Zoom in to see the application names.
+
+        <kbd>![AMA_Visualization_SampleData_Increased](./images/media/AMA_Visualization_SampleData_Increased.png)</kbd>
+    
+        You can filter by name to see only specific applications and dependencies.
+
+        <kbd>![AMA_Visualization_Filter_by_Name](./images/media/AMA_Visualization_Filter_by_Name.png)</kbd>
+    
+        You can also filter by library to see only specific applications and dependencies.
+
+        <kbd>![AMA_Visualization_Filter_by_Library](./images/media/AMA_Visualization_Filter_by_Library.png)</kbd>
+    
+    As you can see in the screenshot above, the visualization provides insight which applications share the same database or queue which helps to shape your migration strategy.
 
 
 
+    5. Switch to the **Assessment** tab 
 
-### 5.2 Explore the AMA APIs
+        <kbd>![AMA_Assessment_Tab](./images/media/AMA_Assessment_Tab.png)</kbd>
+    
+        The assessment tab provides ingithh into the different applications.
+        <kbd>![AMA_Assessment_Overview](./images/media/AMA_Assessment_Overview.png)</kbd>
+    
+    6. Under **Applications**, you can specify the target  Java SE and Java EE level.
+
+        <kbd>![AMA_Assessment_Total.png](./images/media/AMA_Assessment_Total.png)</kbd>
+
+        Under **Total Applications**, you can see the effort for the chosen target. AMA also analyzes all the application code and common code that is shared across applications and provides an estimated total cost for migrating the apps and common code in the workspace. 
+        
+        Total cost is the number of days of development cost to migrate that code to run on the selected migration target. In this example, WebSphere Liberty is the selected migration target.
+
+    7. Change the Java SE Level and the Java EE level to find out how the overall effort changes.
+
+        <kbd>![AMA_Assessment_Total2.png](./images/media/AMA_Assessment_Total2.png)</kbd>
+
+        Finally change the Java SE and Java EE level back to the minimum to see the efforts for te quickest path of modernization.
+
+    8. Take a look further down at the application list.
+
+        <kbd>![AMA_Assessment_Application_List.png](./images/media/AMA_Assessment_Application_List.png)</kbd>
+    
+        The “All Java applications” page also shows the application summary analysis results for all the apps from the AppSrv01 profile for each of the selected migration targets.
+
+        For each app / migration target combination, you can see these results:
+
+        - Java application
+        - Collection / Profile name
+        - Complexity
+        - Issues
+        - Required code changes
+        - Application cost (in days)
+        - Migration plan
+
+        The following details are included in the summary table (this is the per-application view):
+
+        - Application Name: The name of the EAR/WAR file found on the application server.
+
+        - Collection/Profile: Collection represents the hostname of the machine where the application resides. The profile represents the profile name in the application server where the application is installed.
+
+        - Complexity: Indicates how complex Transformation Advisor considers this application to be if you were to migrate it to the cloud.
+
+        - Issues: The number and severity of potential issues with the migration of the application.
+
+        - Required code changes: Indicates the type of code change needed.
+
+        - Application cost in days: Provides an estimate in days for the development effort to perform the migration for just this application. Cost estimates calculated by Transformation Advisor are high-level estimates only and may vary widely based on skills and other factors not considered by the tool.
+
+        - Migration plan: accelerator files generated by Transformation advisor to aide in building and deploying the selected application to the target runtime.
+
+    9. Feel free to expand the one or other app to see more details about an application.
+        <kbd>![AMA_Assessment_Application_Expanded.png](./images/media/AMA_Assessment_Application_Expanded.png)</kbd>
+    
+
+### 5.3 Explore the AMA APIs
+Application Modernization Accelerator (AMA) also provides OpenAPI interfaces to acvess some of the data via APIs.
+
+
 
 Run AMA Discovery Tool
 https://localhost:2220/openapi/ui/
