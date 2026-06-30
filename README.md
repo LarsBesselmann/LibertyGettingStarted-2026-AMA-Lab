@@ -40,7 +40,7 @@ Additionally, the tool provides a recommendation for the right-fit IBM WebSphere
 
 As shown in the image below, your company has several web applications deployed to WebSphere Application Server (WAS) environment.
 
-
+<kbd>![Toolbar_terminal](./images/media/AMA_Visualization_SampleData.png)</kbd>
 
 Your company wants to move these applications to the modern WebSphere Liberty server on a container-based cloud. However, you are not sure how much effort the migration process might take.
 
@@ -87,9 +87,6 @@ The following software hsa been installed:
 ## 5. Explore Application Modernization Accelerator
 In this section, you will explore the main capabilities of Application Modernization Accelerator. You will use the sample data that is shipped with the product. 
 
-create in AMA a workspace with sample data. This will be used to explain the basic concepts and highlight features like **Visualization** and **Common Code**.
-
-
 ### 5.1 Explore the AMA User Interface
 Application Modernization Accelerator(AMA) is already installed. 
 
@@ -127,6 +124,8 @@ Application Modernization Accelerator(AMA) is already installed.
     2. Access the AMA User Interface via the URL http://localhost:30000
 
 3. 
+
+
 
 
 ### 5.2 Explore the AMA APIs
@@ -184,7 +183,7 @@ curl -k -X 'POST' \
 
 2. Clone the repository to get access to the application binaries and more.
 
-        git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/home/itzuser/Student/backup
+        git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/home/itzuser/Student/modresorts-project
 
 
 ### 6.3 Assess the WebSphere applications
