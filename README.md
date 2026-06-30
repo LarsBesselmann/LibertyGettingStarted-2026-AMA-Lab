@@ -232,24 +232,29 @@ Let's check if AMA is already started. This can be validated by reviewing if the
     
 
 ### 5.3 Explore the AMA APIs
-Application Modernization Accelerator (AMA) also provides OpenAPI interfaces to acvess some of the data via APIs.
+Application Modernization Accelerator (AMA) also provides Swagger interfaces to access some of the data via APIs.
+
+1. Open a browser and enter the following URL:
+    https://localhost:2220/openapi/ui/
+
+    <kbd>![AMA_Swagger_APIs.png](./images/media/AMA_Swagger_APIs.png)</kbd>
+
+2. Look at the different APIs which allow to create a new workspace, upload a data collection or bulk, upload the license key and much more.
+
+The create for example the demo workspace which you just created manually, you could use the following command:
+
+    curl -k -X 'POST' \
+    'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
+      -H 'accept: */*' \
+      -H 'locale: en' \
+      -H 'workspaceName: sampleData' \
+      -d ''
+
+Right now, you just explored the capabilities of AMA based on sample data. In the next section, you will analyze the modresorts application to identify the efforts to migrate it from traditional WAS to Liberty. You will use the AMA Discovery tool to gather the data collection from an existing WebSphere installation and perform some analysis.
+Then you will use the AMA Dev Tools to make the required code changes.
 
 
-
-Run AMA Discovery Tool
-https://localhost:2220/openapi/ui/
-
-
-curl -k -X 'POST' \
-  'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
-  -H 'accept: */*' \
-  -H 'locale: en' \
-  -H 'workspaceName: sampleData' \
-  -d ''
-
-
-
-## 6. Execute Lab Tasks
+## 6. Build and analyze the modesorts application.
 
 ### 6.1 Verify the installed software 
 
@@ -290,6 +295,11 @@ curl -k -X 'POST' \
 2. Clone the repository to get access to the application binaries and more.
 
         git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/home/itzuser/Student/modresorts-project
+
+
+3. Build the application
+
+mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
 
 ### 6.3 Assess the WebSphere applications
