@@ -134,7 +134,7 @@ Let's check if AMA is already started. This can be validated by reviewing if the
         <kbd>![AMA_Initial_Screen](./images/media/AMA_Initial_Screen.png)</kbd>
     
 
-    3. Click on the button **Create workspace** and enter **tWAS**, select **incluide sample data**, then click on **Create**.
+    3. Click on the button **Create workspace** and enter **Sample_Data**, select **incluide sample data**, then click on **Create**.
 
         <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS.png)</kbd>
     
@@ -402,10 +402,11 @@ The application has not been installed to traditional WAS so far. You will first
         ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
 
-As you have seen, the application works without any issue on WebSPhere Traditional v9.
-
+As you have seen, the application works without any issue on WebSPhere Traditional v9. The next step is to assess the application via AMA to find out which issues must be resolved to make the application work on Liberty with Java 8.
 
 ### 6.3.3 Create a AMA data collection for the WAS applications
+
+Switch back to the AMA User Interface and create a new workspace called tWAS.
 
 
 
