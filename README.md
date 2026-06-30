@@ -360,7 +360,7 @@ The application has not been installed to traditional WAS so far. You will first
 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./setURLProvider.py
 
-    <kbd>![tWAS_install_modresorts](./images/media/tWAS_install_modresorts.png)</kbd>
+    <kbd>![tWAS_set_URLProvider](./images/media/tWAS_set_URLProvider.png)</kbd>
 
 6. Enter the following command to start the WAS server server1
 
@@ -368,7 +368,7 @@ The application has not been installed to traditional WAS so far. You will first
 
     Wait until the server serer1 has been started
     
-    <kbd>![tWAS_server1-start](./images/media/tWAS_server1-start.png)</kbd>
+    <kbd>![tWAS_server1-start](./images/media/tWAS_server1_start.png)</kbd>
 
 6. Test the application
 
@@ -378,9 +378,23 @@ The application has not been installed to traditional WAS so far. You will first
 
     2. Access the application on tWAS using the URL http://localhost:9080/resorts
 
-    3. Click on the link for **Security** and check that there are no errors shown. Then scroll down and click on the kink to return to the main page.
+    <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_1.png)</kbd>
 
-    4. Click on the link for **logout** and check that there are no errors
+    3. Click on **Where to** and switch to Paris or another city. 
+
+    <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_2.png)</kbd>
+
+    Verify that there are no errors shown. 
+    
+    <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_3.png)</kbd>
+    
+    4. Click on the link for **Logout** and check that there are no errors
+
+    <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_4.png)</kbd>
+
+    Verify that there are no errors shown. 
+    
+    <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_5.png)</kbd>
 
 7. Stop the WAS instances
 
@@ -388,6 +402,7 @@ The application has not been installed to traditional WAS so far. You will first
         ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
 
+As you have seen, the application works without any issue on WebSPhere Traditional v9.
 
 
 ### 6.3.3 Create a AMA data collection for the WAS applications
