@@ -353,9 +353,16 @@ The application has not been installed to traditional WAS so far. You will first
 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./modresorts_install.py
 
+    <kbd>![tWAS_install_modresorts](./images/media/tWAS_install_modresorts.png)</kbd>
+
+
+5. Set the URLProvider using wsadmin by entering the following commands:
+
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./setURLProvider.py
 
-5. Enter the following command to start the WAS server server1
+    <kbd>![tWAS_install_modresorts](./images/media/tWAS_install_modresorts.png)</kbd>
+
+6. Enter the following command to start the WAS server server1
 
        ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
 
