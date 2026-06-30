@@ -292,26 +292,38 @@ Then you will use the AMA Dev Tools to make the required code changes.
         mkdir ~/Student/assets
         mkdir ~/Student/backup
 
-2. Clone the repository to get access to the application binaries and more.
+### 6.3 Build and deploy the WebSphere applications
+
+The objective of this section is to assess the simple-pharmacy application that has been deployed to a traditional WAS 9 instance.
+
+### 6.3.1 Build the WAS appplication
+
+1. Clone the repository to get access to the application binaries and more.
 
         git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/Student/modresorts-project
 
-3. Build the application
+
+2. Install the required WAS library
 
         cd ~/Student/modresorts-project/
 
         mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
-        
 
-### 6.3 Assess the WebSphere applications
+      <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
 
-The objective of this section is to assess the simple-pharmacy application that has been deployed to a traditional WAS 9 instance.
+3. Build the application
+    
+        mvn clean package
+
+      <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_1.png)</kbd>
+
+    <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_2.png)</kbd>
 
 
-### 6.3.1 Deploy the WebSphere application and test it
+### 6.3.2 Deploy the WebSphere application and test it
 
-The application has not been installed to WAS so far. You will first deploy the application to an eisting WAS ND instance. Then you will test if the application as is works fine or not.
+The application has not been installed to traditional WAS so far. You will first deploy the application to an eisting WAS ND instance. Then you will test if the application as is works fine or not.
 
 1. Switch to the terminal window.
 
@@ -333,11 +345,11 @@ The application has not been installed to WAS so far. You will first deploy the 
 
 4. Deploy the application using wsadmin by entering the following commands:
 
-        cp ~/Student/backup/assets/simple-pharmacy*.py ~/Student/assets
-        cp ~/Student/backup/assets/simple-pharmacy*.war ~/Student/assets
-        cd ~/Student/assets
-       
-         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./simple-pharmacy_setup.py
+        cd ~/Student/modresorts-project/tWAS-Scripts
+
+        ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./modresorts_install.py
+
+        ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./setURLProvider.py
 
 5. Enter the following command to start the WAS server server1
 
@@ -353,7 +365,7 @@ The application has not been installed to WAS so far. You will first deploy the 
 
         <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
 
-    2. Access the application on tWAS using the URL http://localhost:9080/simplePharmacy/dashboard
+    2. Access the application on tWAS using the URL http://localhost:9080/resorts
 
     3. Click on the link for **Security** and check that there are no errors shown. Then scroll down and click on the kink to return to the main page.
 
