@@ -134,15 +134,15 @@ Let's check if AMA is already started. This can be validated by reviewing if the
         <kbd>![AMA_Initial_Screen](./images/media/AMA_Initial_Screen.png)</kbd>
     
 
-    3. Click on the button **Create workspace** and enter **Sample_Data**, select **incluide sample data**, then click on **Create**.
+    3. Click on the button **Create workspace** and enter **Sample_Data**, select **include sample data**, then click on **Create**.
 
-        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS.png)</kbd>
+        <kbd>![AMA_Workspace_Sample_Data](./images/media/AMA_Workspace_Sample_Data.png)</kbd>
     
     4. The workspace will be created.
-        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS_create.png)</kbd>
+        <kbd>![AMA_Workspace_Sample_Data](./images/media/AMA_Workspace_Sample_Data_create.png)</kbd>
     
     5. Wait until the workspace has been created which can take a minute or so. Finally you will see that the workspace has been created and contains 29 sample applications, 7 databases and 9 queues.
-        <kbd>![AMA_Workspace_tWAS](./images/media/AMA_Workspace_tWAS_created.png)</kbd>
+        <kbd>![AMA_Workspace_Sample_Data_created](./images/media/AMA_Workspace_Sample_Data_created.png)</kbd>
     
 2. Explore the workspace with the sample applications
 
@@ -178,10 +178,10 @@ Let's check if AMA is already started. This can be validated by reviewing if the
 
         <kbd>![AMA_Assessment_Tab](./images/media/AMA_Assessment_Tab.png)</kbd>
     
-        The assessment tab provides ingithh into the different applications.
+        The assessment tab provides insight into the different applications.
         <kbd>![AMA_Assessment_Overview](./images/media/AMA_Assessment_Overview.png)</kbd>
     
-    6. Under **Applications**, you can specify the target  Java SE and Java EE level.
+    6. Under **Applications**, you can specify the target Java SE and Java EE level.
 
         <kbd>![AMA_Assessment_Total.png](./images/media/AMA_Assessment_Total.png)</kbd>
 
@@ -247,7 +247,7 @@ The create for example the demo workspace which you just created manually, you c
     'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
       -H 'accept: */*' \
       -H 'locale: en' \
-      -H 'workspaceName: sampleData' \
+      -H 'workspaceName: Sample_Data' \
       -d ''
 
 Right now, you just explored the capabilities of AMA based on sample data. In the next section, you will analyze the modresorts application to identify the efforts to migrate it from traditional WAS to Liberty. You will use the AMA Discovery tool to gather the data collection from an existing WebSphere installation and perform some analysis.
