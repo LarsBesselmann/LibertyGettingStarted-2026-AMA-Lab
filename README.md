@@ -294,7 +294,7 @@ Then you will use the AMA Dev Tools to make the required code changes.
 
 2. Clone the repository to get access to the application binaries and more.
 
-        git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/home/itzuser/Student/modresorts-project
+        git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/Student/modresorts-project
 
 
 3. Build the application
