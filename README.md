@@ -310,15 +310,19 @@ The objective of this section is to assess the simple-pharmacy application that 
         mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
 
-      <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
+    <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
 
 3. Build the application
     
         mvn clean package
 
-      <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_1.png)</kbd>
+    <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_1.png)</kbd>
 
     <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_2.png)</kbd>
+
+4. Copy the generated war file into the assets directory
+    
+        cp ~/Student/modresorts-project/target/modresorts-2.0.0.war ~/Student/assets/
 
 
 ### 6.3.2 Deploy the WebSphere application and test it
