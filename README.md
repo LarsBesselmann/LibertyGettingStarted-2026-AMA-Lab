@@ -296,11 +296,13 @@ Then you will use the AMA Dev Tools to make the required code changes.
 
         git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/Student/modresorts-project
 
-
 3. Build the application
 
-mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
+        cd ~/Student/modresorts-project/
 
+        mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
+
+        
 
 ### 6.3 Assess the WebSphere applications
 
