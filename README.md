@@ -697,8 +697,8 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
 
     Next to the files mentioned before, the migration bundle contains several other files for Kubernetes deployment, for kustomization as well as placeholder files for the application and the JDBC drivers.
 
-    As you can see, the migration plan does not contain any information about the recipes that could be applied.
-    As it is a migration plan created by a AMA Trial version, it can also not be used with the AMA Dev Tools as ong as the AMA Dev Tools do not have a license applied.
+    As you can see, the migration plan contains a trial key.
+    As it is a migration plan created by a AMA Trial version, it can only be used with AMA Dev Tools if AMA Dev Tools have a license applied.
 
 11. Upload the AMA license to get a full migration plan.
 
@@ -726,13 +726,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
         unzip -t ~/Downloads/modresorts-2_0_0_war.ear_migrationPlan(1).zip 
 
     
-    <kbd>![AMA_Evaluation_Assessment-modresorts18.png](./images/media/AMA_Evaluation_Assessment-modresorts13.png)</kbd>
-
-    Next to the files mentioned before, the migration bundle contains several other files for Kubernetes deployment, for kustomization as well as placeholder files for the application and the JDBC drivers.
-
-    As you can see, the migration plan does not contain any information about the recipes that could be applied.
-    As it is a migration plan created by a AMA Trial version, it can also not be used with the AMA Dev Tools as ong as the AMA Dev Tools do not have a license applied.
-
+    <kbd>![AMA_Evaluation_Assessment-modresorts18.png](./images/media/AMA_Evaluation_Assessment-modresorts18.png)</kbd>
 
 
 ### 6.3.8 Recap
