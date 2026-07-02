@@ -443,9 +443,11 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
     1. Go back to the Terminal window and navigate the /home/itzuser/Downloads directory and view its contents with commands:
 
-        cd /home/itzuser/Downloads/
+            cd /home/itzuser/Downloads/
+            ls -l | grep Discovery
 
-        ls -l | grep ama
+        <kbd>![AMA_Discovery_Run_1](./images/media/AMA_Discovery_Run_1.png)</kbd>
+            
 
     You can see the downloaded data collector utility file named “transformationadvisor-Linux_Evaluation.tgz”
 
