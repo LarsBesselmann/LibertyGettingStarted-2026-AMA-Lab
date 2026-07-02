@@ -430,8 +430,8 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     
     5. Click on **Open discovery tool**.
         <kbd>![AMA_Workspace_Evaluation_Create2](./images/media/AMA_Workspace_Evaluation_Create2.png)</kbd>
-    
-    6. The Discovery Tool panel opens and provides the option to download the tool, in addition it provides information how to use the tool. Click on **Download discovery tool**.
+    The Discovery Tool panel opens and provides the option to download the tool, in addition it provides information how to use the tool. 
+    6. Click on **Download discovery tool**.
     <kbd>![AMA_DiscoveryTool_Panel](./images/media/AMA_DiscoveryTool_Panel.png)</kbd>
     The AMA Discovery Tool package will be generated and downloaded.
     <kbd>![AMA_DiscoveryTool_Download](./images/media/AMA_DiscoveryTool_Download.png)</kbd>
@@ -454,20 +454,59 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
             tar xvfz DiscoveryTool-Linux_Evaluation.tgz -C ~/Student
 
-        The Discovery Tool will be extracted to /home/itzuser/Student/transformationadvisor-3.9.0 directory.
+        The Discovery Tool will be extracted to ~/Student/ama-discovery-4.6.2 directory.
 
         Note: At this point, the data collector is ready to execute against a WebSphere environment.
 
-    Return to the Transformation Advisor UI in the Web browser to view the section on “Run the Tool”, which shows the command to run on the WebSphere environment.
+    3. Return to the AMA UI in the Web browser to view the section on “Run the Tool”, which shows the command to run on the WebSphere environment.
 
-    a. From the Data Collector page, scroll down to the “Run Tool” section.
+        a. From the Discovery Tool page, scroll down to the “Run Tool” section.
 
-    The data collector command that would be executed is based on the domain and analysis type selections you make in this section.
+        <kbd>![AMA_Discovery_Run_2](./images/media/AMA_Discovery_Run_2.png)</kbd>
+        
+        The Discovery tool command that would be executed is based on the domain and analysis type selections you make in this section.
 
-    Choose the IBM WebSphere Domain. Other domains include other JAVA EE runtimes.
+        b. Select the domain.
 
-    Note: The data collector tool command changes based on this selection.
+        Open the twisty to see the different domain options:
 
+        <kbd>![AMA_Discovery_Run_3](./images/media/AMA_Discovery_Run_3.png)</kbd>
+        
+        Change the domain and you can see that the command will change.
+        Finally switch back to the **IBM WebSphere** Domain. 
+
+        c. Select the Analysis type
+        
+        Open the twisty to see the different analysis types:
+
+        <kbd>![AMA_Discovery_Run_4](./images/media/AMA_Discovery_Run_4.png)</kbd>
+        
+        Change the analysis type and you can see that the command will change. Finally switch back to the **Apps & Configuration** analysis. 
+        Selecting **Apps & Configuration** ensures that the application data and server configuration data is collected.
+ 
+        The server configuration data is extremely helpful in Transformation Advisor to generate deployment artifacts in the migration bundle, which we will explore later in the lab.
+ 
+        d. Review the final command.
+        To analyze the application and configuration for WebSphere will be done using a command as shown in the screenshot
+        <kbd>![AMA_Discovery_Run_5](./images/media/AMA_Discovery_Run_5.png)</kbd>
+    
+
+6.  Execute the AMA Discovery Tool.
+
+    1. Go back to the Terminal window and navigate the directory where the AMA Discovery Tool was extracted, then list the content:
+
+            cd ~/Student/ama-discovery-4.6.2
+            ls -l | grep Discovery
+
+        <kbd>![AMA_Discovery_Run_6](./images/media/AMA_Discovery_Run_6.png)</kbd>
+    
+
+    ___
+    
+    **IMPORTANT!**
+    
+    For this lab, we have already executed the the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into Transformation Advisor UI. 
+    ___
 
 
 
