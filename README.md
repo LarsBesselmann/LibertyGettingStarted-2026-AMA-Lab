@@ -496,30 +496,329 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     1. Go back to the Terminal window and navigate the directory where the AMA Discovery Tool was extracted, then list the content:
 
             cd ~/Student/ama-discovery-4.6.2
-            ls -l | grep Discovery
+            ls -l
 
         <kbd>![AMA_Discovery_Run_6](./images/media/AMA_Discovery_Run_6.png)</kbd>
-    
 
-    ___
+
+    2.  Execute the following command to start the AMA Discovery Tool:
+
+            ./bin/ama-discovery -w ~/usr/IBM/WebSphere/AppServer
+
+        <kbd>![AMA_Discovery_Run_7](./images/media/AMA_Discovery_Run_7.png)</kbd>
+
+        The license agreement will be displayed. 
+        
+        <kbd>![AMA_Discovery_Run_8](./images/media/AMA_Discovery_Run_8.png)</kbd>
+        
+
+        Type **1** to accept the license agreement and press **Enter**.
+
+    3. Wait until the analysis has completed. As you can see, 4 applications have been analyzed and the resulting data collection has been automatically uploaded. 
+
+        <kbd>![AMA_Discovery_Run_9](./images/media/AMA_Discovery_Run_9.png)</kbd>
+    
+        The collection is also availabe as zip file in the directory where the dicsovery tool was called.
+
+            ls -l
+
+        <kbd>![AMA_Discovery_Run_10](./images/media/AMA_Discovery_Run_10.png)</kbd>
+
+
+        Comment: In the lab, the process only takes a couple of seconds. In a real scenario, the process typically takes some time to complete, depending on how many applications are deployed on the WebSphere Application server and the complexity of the applications. 
+        As this process consumes some CPU and memory, it is not recommended to run the discovery tool in production.
+
+    4. Return to the AMA UI in the Web browser and you can see that the data collection has been uploaded. You will be asked to specify the modernization destination. Select **Liberty** as destination and click on **Confirm**.
+    
+        <kbd>![AMA_Select_Liberty](./images/media/AMA_Select_Liberty.png)</kbd>
+
+        The Evaluation workspace will open in the Visualization View. 
+    
+        <kbd>![AMA_Visualization_Evaluation](./images/media/AMA_Visualization_Evaluation.png)</kbd>
+
+        You can see the 4 applications that have been discovered.
+
+
+    In general, if your application server and **AMA** are in the same network infrastructure, the collected data will be automatically uploaded to **AMA** for you  to view the analysis results. 
+    Otherwise, you must manually upload the data to **AMA** before you can view the results. You could also specify not to upload the data collection automatically.
     
     **IMPORTANT!**
     
-    For this lab, we have already executed the the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into Transformation Advisor UI. 
+    As backup for this lab, we have already executed the the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into the AMA UI. 
     ___
 
-
-
-
-
-
-[itzuser@vm-1 work]$ cd ../usr/IBM/
-[itzuser@vm-1 IBM]$ tar -zxf ~/Downloads/DiscoveryTool-Linux_localWAS.tgz
-[itzuser@vm-1 IBM]$
-
-
-
 ### 6.3.2 Assess the applications using AMA
+
+In this section of the lab, you will explore assessment details for the **modresorts** application. 
+
+1. In the AMA Visualization View, you can see that the modresorts application has no connections to a database or queue.
+ 
+    <kbd>![AMA_Visualization_Evaluation](./images/media/AMA_Visualization_Evaluation2.png)</kbd>
+
+2. Switch to the Assessment View.
+
+    <kbd>![AMA_Assessment_Tab2](./images/media/AMA_Assessment_Tab2.png)</kbd>
+
+    You can see the assement details for the 4 applications and the efforts to modernize them them to Liberty.
+    <kbd>![AMA_Evaluation_AllApplications](./images/media/AMA_Evaluation_AllApplications.png)</kbd>
+
+3. In the environment, the trial version of AMA is used. Therefore the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a permanent access key to unlock the option.
+
+    <kbd>![AMA_Evaluation_Assessment_Trial](./images/media/AMA_Evaluation_Assessment_Trial.png)</kbd>
+
+
+4. You will now assess the modresorts application.
+
+    1. Enter as filter the text *modr** to see only the modresorts application. 
+
+        <kbd>![AMA_Evaluation_modresorts.png](./images/media/AMA_Evaluation_modresorts.png)</kbd>
+
+        The application modresorts has been assessed
+        - of complexity **Moderate**, which means that code changes might be required
+        - **5 severe issues** have been identified with need to be fixed
+        - some of the required code changes can be done automated via recipes
+        - the estimated development effort is 2.5 days
+    
+    2. Click on the application to get more details
+        
+        <kbd>![AMA_Evaluation_Assessment-modresorts.png](./images/media/AMA_Evaluation_Assessment-modresorts.png)</kbd>
+
+    
+    3. Expand the **`Complexity Rules`** for moving the application to WebSphere Liberty. 
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts2.png](./images/media/AMA_Evaluation_Assessment-modresorts2.png)</kbd>
+
+
+        From this view, you get insights into the related issues that may require code changes or configuration changes. 
+
+        *In this example, there is 5 issues of which 3 have an automated fix:*
+
+        - **Avoid using the deprecated WSSecurityHelper revokeSSOCookies and getLTPACookieFromSSOToken methods**
+        - **Use the default InitialContext JNDI properties**
+        - **The WebSphere Servlet API was superseded by a newer implementation**
+        - **Getting the server name on Liberty**
+        - **The WebSphere Runtime APIs and SPIs are unavailable**
+
+        There are also 4 **informational issue** which are well known and documented how to resolve by the migration tools.
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts3.png](./images/media/AMA_Evaluation_Assessment-modresorts3.png)</kbd>
+
+    4. Scroll down to the section about unique code issues and expand it.
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts4.png](./images/media/AMA_Evaluation_Assessment-modresorts4.png)</kbd>
+
+        Expand any of the 5 issues and you can get more details about the issue, recommended changes and which code is impacted.
+
+    5. In addition to the information in the view, AMA also provides different kinds of reports:
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts5.png](./images/media/AMA_Evaluation_Assessment-modresorts5.png)</kbd>
+
+        - The **Analysis Report** does a deep dive on the preferred migration target to help you understand any migration issues, like deprecated or removed APIs, Java SE version differences, and Java EE behavioural differences. Note that Application Modernization Accelerator uses a rule system based on commonly occurring events that are seen in real applications to enhance the base reports and provide practical guidance. As a result, some items may show a different severity level in Application Modernization Accelerator than they do in the detailed binary scanner reports.
+        
+        - The **Technology Report** identifies the editions of WebSphere Application Server that are best suited to run the application. The report provides a list of Java EE programming models that are used by the application and indicates which platforms will support the application.
+
+
+        - The **Inventory Report** helps you examine what is in your application, including the number of modules and the technologies in those modules. It also gives you a view of all the utility JAR files in the application that tend to accumulate over time. Potential deployment problems and performance considerations are also covered.
+
+       
+
+### 6.3.3  Examine the Liberty modernization assets generated by AMA
+
+AMA not only provides great insights about your applications that you consider modernizing to WebSphere Liberty, it also generates deployment accelerators for building and deploying the application on Liberty, containers, and Kubernetes based clouds. 
+
+In this section, we take a quick peak at the **Liberty server configuration** `server.xml` that AMA generates, based on the analysis of the WebSphere configuration when the Transformation Advisor data collector was run against the WebSphere server on the VM.  
+
+Simply put, AMA creates the server.xml file that contains the Liberty server configuration required to run the application on Liberty.  
+
+1.	On the moderesorts panel, click on the button on the upper right called **View migration plan**.
+
+    <kbd>![AMA_Evaluation_Assessment-modresorts6.png](./images/media/AMA_Evaluation_Assessment-modresorts6.png)</kbd>
+
+
+3.	Click on the **`Migration plan`** link located next to the **`CustomerOrderServicesApp.ear`** for **`WebSphere Liberty`**, which will display the migration plan for the WebSphere Liberty target. 
+
+    <kbd>![](./images/media/TA_COS_WLP_new.png)</kbd>
+    
+4.	The **`Migration plan`** displays a "partial list" of files generated by Transformation advisor to assist in the migration of the application.
+
+    - **server.xml:** the configuration for the Liberty server
+    - **pom.xml:** Build the application using Maven
+    - **Containerfile:** Create the Docker image for the application
+    - **application CR:** Custom Resource for the application to be deployed to OpenShift via the Open Liberty Operator
+    - **secret.yaml:** Configuration file for database connection settings in OpenShift
+    <!-- LBH: Adjusted picture -->
+    <kbd>![](./images/media/TA_Migration_bundle_new.png)</kbd>
+
+5.	Click to view the contents of the **`server.xml`** file.
+    <!-- LBH: Adjusted picture -->
+    <kbd>![](./images/media/TA_Migration_artifacts_new.png)</kbd>
+
+6.	The **server.xml** is displayed in the File preview window, click **`Show more`** to expand it.
+
+    <kbd>![](./images/media/TA_server_xml_preview_new.png)</kbd>
+ 
+
+7.	Review the contents of the **server.xml** file.
+
+    Notice that Transformation Advisor generated the **server.xml** file that includes the Liberty server configuration that has been mapped from the original WebSphere traditional application server. 
+
+    When the Transformation Advisors data collector was run against the WebSphere Application server, it analyzed the applications and the WebSphere server configuration. The server configuration data was used to generate an appropriate server.xml file to configure the application on Liberty. 
+
+    a.	The **Liberty features** that the application uses are configured. 
+    <!-- LBH: Updated picture -->
+    <kbd>![](./images/media/TA_server_xml_features_new.png)</kbd>
+
+
+    b.	The **application endpoints** and **enterprise application module configuration** including **Security roles** used by the application are configured. Notice that **variables ${ }** are used to simplify external configuration overrides and default values. 
+    <!-- LBH: Updated picture -->
+    <kbd>![](./images/media/TA_server_xml_app_new.png)</kbd>
+
+    c.	**Database configuration** and **authentication aliases** are configured. Again, notice variables used. 
+    <!-- LBH: Updated picture -->
+    <kbd>![](./images/media/TA_server_xml_sec_new.png)</kbd>
+
+
+    d.	**Variables**, and default values, where it makes sense are configured.
+    <!-- LBH: Updated picture -->
+    These variables are used to extract data that is likely going to be different between environments such as TEST, QA, PROD environments. 
+
+    The variables are easily overridden by environment variables or configMaps and secrets in Kubernetes environments. 
+
+    <kbd>![](./images/media/TA_server_xml_var_new.png)</kbd>
+
+<!-- LBH: Added app dependencies -->
+8. Close the File Preview, then scroll down and open the twisty to see application dependencies. As you can see, the application required DB2 driver jars. 	
+    <kbd>![](./images/media/TA_AppDependencies_new.png)</kbd>
+
+9. Click to download the **Migration Plan** generated by Transformation Advisor
+
+    <kbd>![](./images/media/TA_Bundle_Download_new.png)</kbd>
+
+    Leave the target folder and file name and press Save. The migration bundle in the form of a zip file will be downloaded to the **Download** directory of the VM.
+10.	Switch to the terminal window and execute the following command to see the content of the migration bundle. 
+
+        unzip -l customerorderservicesapp.ear_migrationBundle.zip
+    
+    <kbd>![](./images/media/COS_migrationBundle_new.png)</kbd>
+    Next to the files mentioned before, the migration bundle contains sevarl other files for Kubernetes deployment, for kustomization as well as placeholder files for the application and the JDBC drivers.
+
+
+###  6.6.2 Evaluate Mod Resorts application
+
+**Mod Resorts is one of the applications that we want to consider  migration to Liberty.**
+ 
+In this section you will review the analysis results for the **modresorts-1_0_war.ear** application and determine if it is a good candidate for migration to Open Liberty or WebSphere liberty.
+
+1.	Return to the “All Java Applications” page in Transformation Advisor.
+
+    <kbd>![](./images/media/image101_new.png)</kbd>
+
+2.	Select all three Migration targets from the menu
+
+    <kbd>![](./images/media/image102_new.png)</kbd>
+
+3.	In the **"search"** field, type **`modresorts`** which will narrow the application list to only the Mod Resorts application for all three migration target. 
+
+    <kbd>![](./images/media/image103_new.png)</kbd>
+
+    In this example, if you want to move the **modresorts-1_0_war.ear** application to **Open Liberty**, the complexity level is **Simple**, which indicates that the application code does not need to be changed before it can be moved to Open Liberty. 
+
+    The application has no dependency, does not have any common code or shared library files. It has one minor (informational level) issue. 
+
+    The estimated development effort is zero day because no code change is required.
+
+    <kbd>![](./images/media/image104_new.png)</kbd>
+
+    Notice that the modresorts application is also simple to migrate to the WebSphere Liberty and WebSphere traditional migration targets. 
+
+    <kbd>![](./images/media/image105_new.png)</kbd>
+
+    For this lab, you will focus on the modernization of `moderesorts-1.0_war.ear` to `Open Liberty`. 
+
+    Next, you will look at the analysis results for**moderesorts-1.0_war**.ear application in detail.
+
+
+4.  Click the **`modresorts-1_0_war.ear`** link targeting **Open Liberty** to expand its analysis results.
+
+    <kbd>![](./images/media/image104a_new.png)</kbd>
+ 
+
+    The first section in the detail analysis summary page is the  **Complexity rules section**. The overall complexity for the  application is **simple**, indicating that the application can be  directly moved to Open Liberty without any code change.
+ 
+    <kbd>![](./images/media/image106_new.png)</kbd>
+
+5.  Scroll down to **`Complexity Rules`** section. You can see there is no code change required and no development cost, the estimate migration
+    over all develop cost is **0 days**.
+
+    This estimate is based on data from IBM Services engagements, which  includes migrating the application code, but does not encompass the  full scope of a migration project that would include server  configuration, testing, etc.
+ 
+    <kbd>![](./images/media/image42_new.png)</kbd>
+
+6.  Expand the **`Issues and details`** section. You can see the only minor potential issue listed is for configuring CDI (Context Dependency Injection beans).
+
+    <kbd>![](./images/media/image43_new.png)</kbd>
+
+7.  Next, scroll down to the bottom of the page and click the **`Technology Report`** link, this opens a new browser window to show
+    the application Evaluation Report.
+
+    <kbd>![](./images/media/image44_new.png)</kbd>
+ 
+    The **Technology report** lists all java technologies the application  used and whether these technologies are supported by a specific  WebSphere platform from Liberty for Java on IBM Cloud to WebSphere  traditional for z/OS.
+ 
+    It is used to determine whether a particular WebSphere product is  suitable for an application.
+
+    <table>
+    <tbody>
+    <tr class="odd">
+    <td><kbd><img src="./images/media/info.png" style="width:1.73958in;height:0.64583in" alt="sign-info" /></kbd></td>
+    <td><p><strong>TIP:</strong></p>
+    <p>If the complexity of migrating to the target environment is “<strong>Complex</strong>” , it means that some APIs are not available in the target runtime and application will have to be rewritten to use different APIs.</p></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <kbd>![](./images/media/image45_new.png)</kbd>
+ 
+    As you can see from the report, the Mod Resorts application only uses  **Java Servlet** which is supported by all WebSphere editions.
+
+8. Go back to the Transformation Advisor page and click the **`Inventory Report`** link.
+
+    <kbd>![](./images/media/TA_Inventory_Report_new.png)</kbd>
+ 
+    The **Inventory Report** helps you examine what is in your application, including the number of modules, their relationships, and the technologies in those modules.
+ 
+    It also gives you a view of all the utility JAR files in the application, and the **Java package names** in the jar files, which will help identify if the classes are the customers application code  or 3<sup>rd</sup> party code. Potential deployment problems and  performance considerations are also included.
+ 
+    <kbd>![](./images/media/image53_new.png)</kbd>
+
+    a.  Scroll down through the `Inventory Report` to view this report which serves as good decision-making tool to info you what is inside your application runtime, and to help you to have a better understanding of the application runtime, the components it has and the relationships among them.
+
+    <kbd>![ta inventory report 2](./images/media/image54_new.png)</kbd>
+
+9. In the `Inventory report`, view the package names of the classes in
+    the utility Jars
+    
+    a.  Scroll down to view the **Contained Archives** section and click on the “**show details**” link next to **modresorts-1.0.war**
+    
+    b.  Then scroll down to the **Utility JAR files** and click on the “**show details**” link next to Utility JAR files
+    
+    c.  View the **Archive names** of the jar files and the **packages** used in the JAR files.
+
+    This is a good way to determine if the code in the utility JARS  include customer code or if they are 3<sup>rd</sup> party jars like (org.pache\*).
+ 
+    Additionally, if the application migration complexity is SIMPLE, you  may want to verify if the utility jars include any company packages  that begin with org or other package names that are IGNORED by default in the Transformation Advisor data collector.
+ 
+    It could be possible that application code was not analyzed due to  package names that are ignored by the data collector
+ 
+    <kbd>![](./images/media/image55_new.png)</kbd>
+ 
+    From the analysis reports you reviewed above, you know that the Mod  Resorts application is supported by Open Liberty, and the issue that  the tool identified would not affect the application migration.
+ 
+    You can confidently select the application as a good candidate for  migrating to Open Liberty with minimal effort.
+
+
+
+
 
 
 ### 6.3.8 Recap
