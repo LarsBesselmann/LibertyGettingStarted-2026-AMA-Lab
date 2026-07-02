@@ -448,16 +448,15 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Discovery_Run_1](./images/media/AMA_Discovery_Run_1.png)</kbd>
             
+        You can see the downloaded Discovery Tool file named “DiscoveryTool-Linux_Evaluation.tgz”
 
-    You can see the downloaded data collector utility file named “transformationadvisor-Linux_Evaluation.tgz”
+    2. Extract the data collector utility to the Student directory using the following command:
 
-    Extract the data collector utility to the Student directory using the following command:
+            tar xvfz DiscoveryTool-Linux_Evaluation.tgz -C ~/Student
 
-    tar xvfz transformationadvisor-Linux_Evaluation.tgz -C ~/Student
+        The Discovery Tool will be extracted to /home/itzuser/Student/transformationadvisor-3.9.0 directory.
 
-    The data collector utility will be extracted to /home/techzone/Student/transformationadvisor-3.9.0 directory.
-
-    Note: At this point, the data collector is ready to execute against a WebSphere environment.
+        Note: At this point, the data collector is ready to execute against a WebSphere environment.
 
     Return to the Transformation Advisor UI in the Web browser to view the section on “Run the Tool”, which shows the command to run on the WebSphere environment.
 
