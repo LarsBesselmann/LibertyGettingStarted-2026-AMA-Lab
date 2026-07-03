@@ -164,7 +164,7 @@ Later on, you will create another workspace for the WebSphere landscape used in 
     
 2. Explore the workspace with the sample applications
 
-    1. CLick on the workspace to open it.
+    1. Click on the workspace to open it.
 
     2. AMA supports three destinations, **Liberty**, **MoRE** and **WebSphere Application Server** (Traditional)
     
@@ -199,19 +199,20 @@ Later on, you will create another workspace for the WebSphere landscape used in 
         The assessment tab provides insight into the different applications.
         <kbd>![AMA_Assessment_Overview](./images/media/AMA_Assessment_Overview.png)</kbd>
     
-    6. Under **Applications**, you can specify the target Java SE and Java EE level.
+    6. Take a look at the upper part
 
         <kbd>![AMA_Assessment_Total.png](./images/media/AMA_Assessment_Total.png)</kbd>
 
-        Under **Total Applications**, you can see the effort for the chosen target. AMA also analyzes all the application code and common code that is shared across applications and provides an estimated total cost for migrating the apps and common code in the workspace. 
+        - Under **Applications**, you can change the destination including the Java SE and Java EE level.
+        - Under **Total Applications**, you can see the effort for the chosen target. AMA also analyzes all the application code and common code that is shared across applications and provides an estimated total cost for migrating the apps and common code in the workspace. 
         
         Total cost is the number of days of development cost to migrate that code to run on the selected migration target. In this example, WebSphere Liberty is the selected migration target.
 
-    7. Change the Java SE Level and the Java EE level to find out how the overall effort changes.
+    7. Change the Java SE Level and the Java EE level to find out how the overall effort changes. As you can see the estimated efforts change.
 
         <kbd>![AMA_Assessment_Total2.png](./images/media/AMA_Assessment_Total2.png)</kbd>
 
-        Finally change the Java SE and Java EE level back to the minimum to see the efforts for te quickest path of modernization.
+        Finally change the Java SE and Java EE level back to the minimum to see the efforts for the quickest path of modernization.
 
     8. Take a look further down at the application list.
 
