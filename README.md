@@ -362,6 +362,7 @@ The objective of this section is to assess the simple-pharmacy application that 
 The application has not been installed to traditional WAS so far. You will now perform the following steps:
 - Start the WAS ND Deployment Manager and a Node Agent
 - Deploy the application via wsadmin to the WAS ND server1 instance
+- Configure WAS for the application
 - Start server1
 - Test the application if it works fine on traditional WAS.
 
@@ -410,11 +411,12 @@ The application has not been installed to traditional WAS so far. You will now p
 
         <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
 
-    2. Access the application on tWAS using the URL http://localhost:9080/resorts
+    2. Access the tWAS application using the URL http://localhost:9080/resorts
 
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_1.png)</kbd>
 
     3. Click on **Where to** and switch to Paris or another city. 
+    (If the button does not work, make sure that the browser is in full-screen.)
 
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_2.png)</kbd>
 
@@ -422,7 +424,7 @@ The application has not been installed to traditional WAS so far. You will now p
     
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_3.png)</kbd>
     
-    4. Click on the link for **Logout** and check that there are no errors
+    4. Click on the **Logout** button.
 
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_4.png)</kbd>
 
@@ -430,13 +432,16 @@ The application has not been installed to traditional WAS so far. You will now p
     
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_5.png)</kbd>
 
-7. Stop the WAS instances
+    If everything worked fine, there should be no error displayed.
+    You will test the same application later on as is if it works on Liberty as well.
+
+7. Switch back to the terminal window and stop the WAS cell.
 
         ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
         ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
 
-As you have seen, the application works without any issue on WebSPhere Traditional v9. The next step is to assess the application via AMA to find out which issues must be resolved to make the application work on Liberty with Java 8.
+As you have seen, the application works without any issue on WebSphere Traditional v9. The next step is to assess the application via AMA to find out which issues must be resolved to make the application work on Liberty with Java 8.
 
 ### 6.3.3 Create an AMA data collection for the WAS applications
 
@@ -445,9 +450,14 @@ You will now switch back to the AMA User Interface and create a new workspace ca
 To evaluate on-premises Java applications, you need to run the AMA Discovery Tool against the Application server environment. It will extract application information from the environment. The utility can be downloaded from the AMA.
 
 1. Create in AMA a new workspace and download the AMA Discovery Tool.
-    1. Open a browser window by clicking on **Activities** and then select the **Firefox** browser icon.
+    1. Switch back to the browser and open the existing AMA window.
+    Then click on **Home**
+        
+        <kbd>![AMA_Assessment_Home.png](./images/media/AMA_Assessment_Home.png)</kbd>
 
-    2. Access the AMA User Interface via the URL http://localhost:30000
+        (If you closed the browser window, open a new browser window and enter the URL https://localhost:3000)
+
+    2. You should now beback on the AMA Overview page:
 
         <kbd>![AMA_Initial_Screen2](./images/media/AMA_Initial_Screen2.png)</kbd>
     
@@ -464,9 +474,21 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     The Discovery Tool panel opens and provides the option to download the tool, in addition it provides information how to use the tool. 
     6. Click on **Download discovery tool**.
     <kbd>![AMA_DiscoveryTool_Panel](./images/media/AMA_DiscoveryTool_Panel.png)</kbd>
-    The AMA Discovery Tool package will be generated and downloaded.
-    <kbd>![AMA_DiscoveryTool_Download](./images/media/AMA_DiscoveryTool_Download.png)</kbd>
-    It will include next to the scanner also the information to upload the data collection once created.
+
+        If you get a warning, that there is a potential security risk, click on **Advanced** and then **Accept the Risk and Continue**. 
+
+        <kbd>![AMA_Potential_Security_Risk](./images/media/AMA_Potential_Security_Risk3.png)</kbd>
+
+    
+        The AMA Discovery Tool package will be generated and downloaded.
+        <kbd>![AMA_DiscoveryTool_Download](./images/media/AMA_DiscoveryTool_Download.png)</kbd>
+    
+        It will include next to the scanner also the information to upload the data collection once created.
+
+    7. Click the back button to return to the Discovery Tool page.
+
+        <kbd>![AMA_DiscoveryTool_Download2](./images/media/AMA_DiscoveryTool_Download2.png)</kbd>
+    
     
 2. Use the AMA Discovery Tool to analyze the installed WebSphere Applications.
 
