@@ -275,6 +275,9 @@ Application Modernization Accelerator (AMA) also provides Swagger interfaces to 
           -H 'workspaceName: Sample_Data' \
           -d ''
 
+3. Close the browser window with the Swagger UI.
+
+
 <br>
 Right now, you just explored the capabilities of AMA based on sample data. In the next section, you will analyze the modresorts application to identify the efforts to migrate it from traditional WAS to Liberty. You will use the AMA Discovery tool to gather the data collection from an existing WebSphere installation and perform some analysis.
 Then you will use the AMA Dev Tools to make the required code changes.
@@ -337,6 +340,7 @@ The objective of this section is to assess the simple-pharmacy application that 
 
         mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
+    Make sure that the build is successfull.
 
     <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
 
@@ -355,11 +359,13 @@ The objective of this section is to assess the simple-pharmacy application that 
 
 ### 6.3.2 Deploy the WebSphere application and test it
 
-The application has not been installed to traditional WAS so far. You will first deploy the application to an eisting WAS ND instance. Then you will test if the application as is works fine or not.
+The application has not been installed to traditional WAS so far. You will now perform the following steps:
+- Start the WAS ND Deployment Manager and a Node Agent
+- Deploy the application via wsadmin to the WAS ND server1 instance
+- Start server1
+- Test the application if it works fine on traditional WAS.
 
-1. Switch to the terminal window.
-
-2. Enter the following command to start the Deployment Manager
+1. In the terminal window, enter the following command to start the Deployment Manager
 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
 
@@ -367,7 +373,7 @@ The application has not been installed to traditional WAS so far. You will first
 
     <kbd>![tWAS_dmgr-start](./images/media/tWAS_dmgr-start.png)</kbd>
 
-3. Enter the following command to start the Note Agent
+2. Enter the following command to start the Note Agent
 
        ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 
@@ -375,7 +381,7 @@ The application has not been installed to traditional WAS so far. You will first
     
     <kbd>![tWAS_node-start](./images/media/tWAS_node-start.png)</kbd>
 
-4. Deploy the application using wsadmin by entering the following commands:
+3. Deploy the application using wsadmin by entering the following commands:
 
         cd ~/Student/modresorts-project/tWAS-Scripts
 
@@ -384,13 +390,13 @@ The application has not been installed to traditional WAS so far. You will first
     <kbd>![tWAS_install_modresorts](./images/media/tWAS_install_modresorts.png)</kbd>
 
 
-5. Set the URLProvider using wsadmin by entering the following commands:
+4. Set the URLProvider using wsadmin by entering the following commands:
 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./setURLProvider.py
 
     <kbd>![tWAS_set_URLProvider](./images/media/tWAS_set_URLProvider.png)</kbd>
 
-6. Enter the following command to start the WAS server server1
+5. Enter the following command to start the WAS server server1
 
        ~/usr/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
 
