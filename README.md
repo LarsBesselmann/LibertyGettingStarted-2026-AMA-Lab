@@ -806,9 +806,20 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
 1. Open VS Code
 
-    1. Open a terminal window and switch to the project directory, then start VS Code.
+    1. Open a terminal window and switch to the project directory, then initialize git.
 
             cd ~/Student/modresorts-project
+            git init
+            git config --global user.name "John Doe"
+            git config --global user.email john.doe@noreply
+
+            git add .
+            git commit -a -m "Initial project"
+
+
+
+    2. Start VS Code.
+
             code . &
 
         Visual Studio Code UI will be opened.
@@ -841,39 +852,52 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_Extensions1.png](./images/media/VSCode_Extensions1.png)</kbd>
 
-    2. Klick on the extension called **IBM Application Modernization Accelerator Developer Tools** (AMA Dev Tools). The AMA Dev Tools help to analyze the application based on source code. 
+    2. Click on the extension called **IBM Application Modernization Accelerator Developer Tools** (AMA Dev Tools). The AMA Dev Tools help to analyze the application based on source code. 
 
         <kbd>![VSCode_Extensions2.png](./images/media/VSCode_Extensions2.png)</kbd>
 
-    3. Klick on the extension called **Liberty Tools**. The Liberty tools provide an easy way to develop against Liberty
+        Close the panel.
+
+    3. Click on the extension called **Liberty Tools**. The Liberty tools provide an easy way to develop against Liberty
 
         <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
 
-    You will use both tools during the lab.
+        Close the panel.
+    
+You will use both tools during the lab.
 
 
 #### Step 6.4.1: Modernize to WebSphere Liberty using AMA Dev Tools
-In the section we will outline how AMA Dev Tools can help with the modernization to Liberty but we will not perform the modernization as the AMA Dev Tools can only help partly.
+In the section we will outline how AMA Dev Tools can help with the modernization to Liberty.
 
-Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
+1. Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
 
-![](./images/AMA_DevTools_ModernizeJavaApps.png)
+    <kbd>![AMA_DevTools_ModernizeJavaApps.png](./images/media/AMA_DevTools_ModernizeJavaApps.png)</kbd>
 
-Click on **Upload migration plan**
+2. Click on **Upload migration plan**
 
-![](./images/AMA_DevTools_Upload_Migrationplan.png)
+    <kbd>![AMA_DevTools_Upload_Migrationplan](./images/media/AMA_DevTools_Upload_Migrationplan.png)</kbd>
 
-Select the migration plan from the **ama**directory.
 
-![](./images/AMA_DevTools_Upload_Migrationplan2.png)
+3. Select the migration plan from the **ama** directory.
 
-Keep the **server.xml** file selected and click on **Proceed**.
+    <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
 
-![](./images/AMA_DevTools_Upload_Migrationplan3.png)
+    (You could also use the migration plan that you downloaded)
+    Click on **Open**.
+
+4. Keep the **server.xml** file selected and click on **Proceed**.
+
+    <kbd>![AMA_DevTools_Upload_Migrationplan3](./images/media/AMA_DevTools_Upload_Migrationplan3.png)</kbd>
+
+
+
+
 
 AMA Dev Tools display the issues and for which of them automated fixes exist.
 
-![](./images/AMA_DevTools_AutomatedFixes.png)
+    <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
+
 
 But before continuing, let's try to run the application as is on Liberty.
 
