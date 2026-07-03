@@ -719,6 +719,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
     <kbd>![AMA_Evaluation_Assessment-modresorts9a.png](./images/media/AMA_Evaluation_Assessment-modresorts9a.png)</kbd>
 
     b.	The **application endpoints** and **enterprise application module configuration** including **context root**, **Security roles** used by the application are configured. Notice that **variables ${ }** are used to simplify external configuration overrides and default values. 
+
     <kbd>![AMA_Evaluation_Assessment-modresorts9b.png](./images/media/AMA_Evaluation_Assessment-modresorts9b.png)</kbd>
 
     c.	**Ressource configurations** like URLProviders, JDBC or JMS Provider, etc.
@@ -775,21 +776,26 @@ Congratulations, you have finished the application assessment part.
 
 ### 6.3.9 Troubleshooting
 
-You will need the migratin plan in the next section. 
+You will need the migration plan in the next section. 
 
 1. If not already done, create the required working directories
 
+        rm -rf ~/Student
         mkdir ~/Student
         mkdir ~/Student/assets
-        
-2. Create a backup directory and clone the repository 
- 
         mkdir ~/Student/backup
-        git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-Lab ~/home/itzuser/Student/backup
 
-3. Copy the server package to the assets directory
+2. Clone the repository to get access to the application binaries and more.
 
-        cp ~/Student/backup/assets/simpleweb-serverpackage.jar ~/Student/assets
+        rm -rf ~/Student/temprepo/
+        git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/Student/temprepo
+        mv ~/Student/temprepo/modresorts-project ~/Student
+        rm -rf ~/Student/temprepo/
+      
+3. Copy the migration plan to the Downloads directory
+
+        cp ~/Student/modresorts-project/ama/modresorts-2_0_0_war.ear_migrationPlan.zip ~/Downloads/
+
 
 <br>
 
