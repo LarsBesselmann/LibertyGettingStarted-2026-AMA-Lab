@@ -759,6 +759,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
     As you can see, the migration plan contains a trial key.
     As it is a migration plan created by a AMA Trial version, it can only be used with AMA Dev Tools if AMA Dev Tools have a license applied.
 
+11. Click the browser window containing the AMA UI
 
 
 ### 6.3.8 Recap
@@ -803,10 +804,36 @@ You will need the migration plan in the next section.
 
 Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools will help you to apply automated fixes and see teh remaining issues in the source code.
 
-1. Open a terminal window and switch to the project directory, then start VS Code.
+1. Open VS Code
 
-        cp ~/Student/modresorts-project
-        code . &
+    1. Open a terminal window and switch to the project directory, then start VS Code.
+
+            cd ~/Student/modresorts-project
+            code . &
+
+        Visual Studio Code UI will be opened.
+
+    2. If you get a pop-up that Authentication is required, enter **IBMDem0s!** in both fields and select **Continue**.
+    
+        <kbd>![VSCode_Keyring.png](./images/media/VSCode_Keyring.png)</kbd>
+
+        Click on **Yes, I trust the authors** to continue.
+
+        <kbd>![VSCode_TrustAuthor.png](./images/media/VSCode_TrustAuthor.png)</kbd>
+
+    3. On the panel called **Walkthrough: Setup VS Code**, you can change the theme. The lab document uses as color **Light+**. Feel free to adjust the theme to your choice. 
+
+        <kbd>![VSCode_Walkthrough.png](./images/media/VSCode_Walkthrough.png)</kbd>
+
+    4. Finally close the panel called **Walkthrough: Setup VS Code**.
+        Also close the panel called **Chat**.
+
+    5. If you see during the lab one of the pop-ups below or any other pop-up asking to install something, close the pop-up without installation by clicking the **X**. 
+
+        <kbd>![VSCode_Popup1.png](./images/media/VSCode_Popup1.png)</kbd>
+
+        <kbd>![VSCode_Popup2.png](./images/media/VSCode_Popup2.png)</kbd>
+
 
 2. Take a look at the installed extensions
 
@@ -821,7 +848,6 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
     3. The AMA Dev Tools which hel to analyze the application
 
         <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
-
 
 
 
