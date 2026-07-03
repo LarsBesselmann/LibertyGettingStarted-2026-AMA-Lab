@@ -507,7 +507,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
             tar xvfz DiscoveryTool-Linux_Evaluation.tgz -C ~/Student
 
-        The Discovery Tool will be extracted to ~/Student/ama-discovery-4.6.2 directory.
+        The Discovery Tool will be extracted to ~/Student/ama-discovery-4.6.3 directory.
 
         Note: At this point, the data collector is ready to execute against a WebSphere environment.
 
@@ -548,7 +548,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
     1. Go back to the Terminal window and navigate the directory where the AMA Discovery Tool was extracted, then list the content:
 
-            cd ~/Student/ama-discovery-4.6.2
+            cd ~/Student/ama-discovery-4.6.3
             ls -l
 
         <kbd>![AMA_Discovery_Run_6](./images/media/AMA_Discovery_Run_6.png)</kbd>
@@ -560,7 +560,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Discovery_Run_7](./images/media/AMA_Discovery_Run_7.png)</kbd>
 
-        The license agreement will be displayed. 
+        The license agreement will be displayed and you will be asked to accept it. 
         
         <kbd>![AMA_Discovery_Run_8](./images/media/AMA_Discovery_Run_8.png)</kbd>
         
@@ -581,7 +581,12 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
         Comment: In the lab, the process only takes a couple of seconds. In a real scenario, the process typically takes some time to complete, depending on how many applications are deployed on the WebSphere Application server and the complexity of the applications. 
         As this process consumes some CPU and memory, it is not recommended to run the discovery tool in production.
 
-    4. Return to the AMA UI in the Web browser and you can see that the data collection has been uploaded. You will be asked to specify the modernization destination. Select **Liberty** as destination and click on **Confirm**.
+    4. Return to the AMA UI in the Web browser and you can see that the data collection has been uploaded. 
+    
+        <kbd>![AMA_Discovery_Run_11](./images/media/AMA_Discovery_Run_11.png)</kbd>
+
+    5. Click on the **Evaluation** workspace to open it.  
+    You will be asked to specify the modernization destination. Select **Liberty** as destination and click on **Confirm**.
     
         <kbd>![AMA_Select_Liberty](./images/media/AMA_Select_Liberty.png)</kbd>
 
