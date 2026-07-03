@@ -818,8 +818,9 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
 
 
-    2. Start VS Code.
+    2. Set the JDK to Java 8 and start VS Code.
 
+            . ~/scripts/set_Java8_temp.sh
             code . &
 
         Visual Studio Code UI will be opened.
@@ -856,13 +857,13 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_Extensions2.png](./images/media/VSCode_Extensions2.png)</kbd>
 
-        Close the panel.
+        Close the AMA Dev Tools Extensions panel.
 
     3. Click on the extension called **Liberty Tools**. The Liberty tools provide an easy way to develop against Liberty
 
         <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
 
-        Close the panel.
+        Close the Liberty Tools Extension panel.
     
 You will use both tools during the lab.
 
