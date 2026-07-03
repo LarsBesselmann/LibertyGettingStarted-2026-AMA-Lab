@@ -897,6 +897,12 @@ In the section we will outline how AMA Dev Tools can help with the modernization
         <kbd>![AMA_DevTools_Issues_Overview](./images/media/AMA_DevTools_Issues_Overview.png)</kbd>
 
 
+        As you can see, there are automated fix available for:
+        - **Use the default InitialContext JNDI properties**
+        - **Getting the server name on Liberty**
+        - **Avoid using the deprecated WSSecurityHelper revokeSSOCookies and getLTPACookieFromSSOToken methods**
+        
+
 2. Test the application on Liberty
 
     Before continuing with the modernization, let's try to run the application as is on Liberty.
@@ -909,6 +915,13 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
             echo "JAVA_HOME=/usr/lib/jvm/ibm-semeru-open-8-jdk" >> src/main/liberty/config/server.env
 
+        <kbd>![modresorts_TestAppOnLiberty0](./images/media/modresorts_TestAppOnLiberty0.png)</kbd>
+
+        The file gets added to the Liberty configuration.
+
+        <kbd>![modresorts_TestAppOnLiberty0a](./images/media/modresorts_TestAppOnLiberty0a.png)</kbd>
+
+
     3. Expand the Liberty Dashboard and click on **Reload**.
 
         <kbd>![modresorts_TestAppOnLiberty1](./images/media/modresorts_TestAppOnLiberty1.png)</kbd>
@@ -917,11 +930,15 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         <kbd>![modresorts_TestAppOnLiberty2](./images/media/modresorts_TestAppOnLiberty2.png)</kbd>
 
+    5. The application gets started 
 
+        <kbd>![modresorts_TestAppOnLiberty2a](./images/media/modresorts_TestAppOnLiberty2a.png)</kbd>
 
+        <kbd>![modresorts_TestAppOnLiberty2b](./images/media/modresorts_TestAppOnLiberty2b.png)</kbd>
 
+    6. Open a browser window and access the application at the URL http://localhost:9080/resorts.
 
-As you can see, there is an automated fix for the **WSSecurityHelper** available.
+    
 
 So you could click on the button **Run automated fixes** to download the recipe and apply the automated fix. (Do not perform the step as we will fix the issues later)
 Click on **Self-directed fixes**. As you can see, there is no automated fix available.
