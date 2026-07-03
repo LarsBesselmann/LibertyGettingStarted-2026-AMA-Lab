@@ -801,6 +801,63 @@ You will need the migration plan in the next section.
 
 ### 6.4 Use the AMA Dev Tools
 
+Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools will help you to apply automated fixes and see teh remaining issues in the source code.
+
+1. Open a terminal window and switch to the project directory, then start VS Code.
+
+    cp ~/Student/modresorts-project
+    code . &
+
+2. Take a look at the installed extensions
+
+    1. The Liberty Dev Tools which provide an easy way to develop against Liberty
+    2. The AMA Dev Tools which hel to analyze the application
+
+
+
+## Step 3.1: Modernize to WebSphere Liberty using AMA Dev Tools
+In the section we will outline how AMA Dev Tools can help with the modernization to Liberty but we will not perform the modernization as the AMA Dev Tools can only help partly.
+
+Switch to the **Explorer**, right-click on **src** and select **Moernize Java Applications > Modernize to Liberty**
+
+![](./images/AMA_DevTools_ModernizeJavaApps.png)
+
+Click on **Upload migration plan**
+
+![](./images/AMA_DevTools_Upload_Migrationplan.png)
+
+Select the migration plan from the **ama**directory.
+
+![](./images/AMA_DevTools_Upload_Migrationplan2.png)
+
+Keep the **server.xml** file selected and click on **Proceed**.
+
+![](./images/AMA_DevTools_Upload_Migrationplan3.png)
+
+AMA Dev Tools display the issues and for which of them automated fixes exist.
+
+![](./images/AMA_DevTools_AutomatedFixes.png)
+
+As you can see, there is an automated fix for the **WSSecurityHelper** available.
+So you could click on the button **Run automated fixes** to download the recipe and apply the automated fix. (Do not perform the step as we will fix the issues later using IBM Bob)
+Click on **Self-directed fixes**. As you can see, there is no automated fix available.
+
+![](./images/AMA_DevTools_SelfDirectedFixes.png)
+
+Click on the issue related to **WebSphere Servlet API** and you can get more details about the issue including document links and a link to the source code. By default you would not have to read through the documentation how to fix it. But there is an indication that there seems to be a fix in watsonx Code Assistant (and therefore also in IBM Bob.)
+
+![](./images/AMA_DevTools_SelfDirectedFixes2.png)
+
+You should now have a good understanding what the AMA Dev Tools provide.
+So close the modernization panel.  
+
+As we now want to use IBM Bob to fix the issues, we want to revert to the status before using the AMA Dev Tools.Therefore discard the change for server.xml via git or delete the file directly in the file system.
+
+![](./images/AMA_DevTools_Delete_server.xml.png)
+
+
+
+
 
 ### 6.5 Recap
 
