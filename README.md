@@ -256,19 +256,26 @@ Application Modernization Accelerator (AMA) also provides Swagger interfaces to 
 1. Open a browser and enter the following URL:
     https://localhost:2220/openapi/ui/
 
+    If you get a warning, that there is a potential security risk, click on **Advanced** and then **Accept the Risk and Continue**. 
+
+    <kbd>![AMA_Potential_Security_Risk](./images/media/AMA_Potential_Security_Risk2.png)</kbd>
+
+    Finally the Swagger UI opens:
+
     <kbd>![AMA_Swagger_APIs.png](./images/media/AMA_Swagger_APIs.png)</kbd>
 
 2. Look at the different APIs which allow to create a new workspace, upload a data collection or bulk, upload the license key and much more.
 
-The create for example the demo workspace which you just created manually, you could use the following command:
+    The create for example the demo workspace which you just created manually, you could use the following command:
 
-    curl -k -X 'POST' \
-    'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
-      -H 'accept: */*' \
-      -H 'locale: en' \
-      -H 'workspaceName: Sample_Data' \
-      -d ''
+        curl -k -X 'POST' \
+        'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
+          -H 'accept: */*' \
+          -H 'locale: en' \
+          -H 'workspaceName: Sample_Data' \
+          -d ''
 
+<br>
 Right now, you just explored the capabilities of AMA based on sample data. In the next section, you will analyze the modresorts application to identify the efforts to migrate it from traditional WAS to Liberty. You will use the AMA Discovery tool to gather the data collection from an existing WebSphere installation and perform some analysis.
 Then you will use the AMA Dev Tools to make the required code changes.
 
