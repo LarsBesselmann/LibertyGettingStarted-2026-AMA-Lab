@@ -15,7 +15,7 @@ Need support? Contact **Lars Besselmann, Lars.Besselmann@de.ibm.com**
 
 ## Explore Application Modernization Accelerator
 
-This lab provides fundamental hands-on experience of the evaluation process of WebSphere application for their modernization journey to Liberty. It shows the value of using Application Modernization Accelerator (AMA) to evaluate on-premises Java applications..
+This lab provides fundamental hands-on experience of the evaluation process of WebSphere application for their modernization journey to Liberty. It shows the value of using Application Modernization Accelerator (AMA) to evaluate on-premises Java applications.
 
 You will also learn how to use the deployment accelerators that AMA generates to help deploy and run Java applications on Liberty and in containers.
 
@@ -73,15 +73,15 @@ The following prerequisites must be completed prior to beginning this lab:
 
 The lab is written for a lab environment hosted by IBM and the software is already installed.
 
-The following software hsa been installed:
+The following software has been installed:
 - Java 17 or beyond 
 - Maven
 - Git
 - WebSphere Application Server Network Deployment
-- The Applicatin Modernization Accelerator
+- The Application Modernization Accelerator
 - Visual Studio Code with the following extensions:
     - The Liberty Tools
-    - The Applicatin Modernization Accelerator Development Tools (AMA Dev Tools)
+    - The Application Modernization Accelerator Developer Tools (AMA Dev Tools)
 
 
 ## 5. Explore Application Modernization Accelerator
@@ -89,7 +89,7 @@ In this section, you will explore the main capabilities of Application Moderniza
 
 ### 5.1 Start AMA
 
-Application Modernization Accelerator(AMA) is already installed nd typically running. 
+Application Modernization Accelerator(AMA) is already installed and typically running. 
 
 Let's check if AMA is already started. This can be validated by reviewing if the related podman containers are started. 
 
@@ -101,7 +101,7 @@ Let's check if AMA is already started. This can be validated by reviewing if the
 
     <kbd>![Terminal](./images/media/Terminal.png)</kbd>
 
-    HINT: By detfault, the terminal window has a dark background.
+    HINT: By default, the terminal window has a dark background.
 
 2. Access the AMA launch script to verify if AMA is started or not
 
@@ -137,7 +137,7 @@ Later on, you will create another workspace for the WebSphere landscape used in 
 
         <kbd>![AMA_Potential_Security_Risk](./images/media/AMA_Potential_Security_Risk.png)</kbd>
     
-        Finally you should see the Application Modernization Overview Screen.
+        Finally, you should see the Application Modernization Overview Screen.
 
         <kbd>![AMA_Initial_Screen](./images/media/AMA_Initial_Screen0.png)</kbd>
     
@@ -159,7 +159,7 @@ Later on, you will create another workspace for the WebSphere landscape used in 
     4. The workspace will be created.
         <kbd>![AMA_Workspace_Sample_Data](./images/media/AMA_Workspace_Sample_Data_create.png)</kbd>
     
-    5. Wait until the workspace has been created which can take a minute or so. Finally you will see that the workspace has been created and contains 29 sample applications, 7 databases and 9 queues.
+    5. Wait until the workspace has been created which can take a minute or so. Finally, you will see that the workspace has been created and contains 29 sample applications, 7 databases and 9 queues.
         <kbd>![AMA_Workspace_Sample_Data_created](./images/media/AMA_Workspace_Sample_Data_created.png)</kbd>
     
 2. Explore the workspace with the sample applications
@@ -212,7 +212,7 @@ Later on, you will create another workspace for the WebSphere landscape used in 
 
         <kbd>![AMA_Assessment_Total2.png](./images/media/AMA_Assessment_Total2.png)</kbd>
 
-        Finally change the Java SE and Java EE level back to the minimum to see the efforts for the quickest path of modernization.
+        Finally, change the Java SE and Java EE level back to the minimum to see the efforts for the quickest path of modernization.
 
     8. Take a look further down at the application list.
 
@@ -260,7 +260,7 @@ Application Modernization Accelerator (AMA) also provides Swagger interfaces to 
 
     <kbd>![AMA_Potential_Security_Risk](./images/media/AMA_Potential_Security_Risk2.png)</kbd>
 
-    Finally the Swagger UI opens:
+    Finally, the Swagger UI opens:
 
     <kbd>![AMA_Swagger_APIs.png](./images/media/AMA_Swagger_APIs.png)</kbd>
 
@@ -283,7 +283,7 @@ Right now, you just explored the capabilities of AMA based on sample data. In th
 Then you will use the AMA Dev Tools to make the required code changes.
 
 
-## 6. Build and analyze the modesorts application.
+## 6. Build and analyze the modresorts application.
 
 ### 6.1 Verify the installed software 
 
@@ -340,7 +340,7 @@ The objective of this section is to assess the simple-pharmacy application that 
 
         mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
-    Make sure that the build is successfull.
+    Make sure that the build is successful.
 
     <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
 
@@ -457,7 +457,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         (If you closed the browser window, open a new browser window and enter the URL https://localhost:3000)
 
-    2. You should now beback on the AMA Overview page:
+    2. You should now be back on the AMA Overview page:
 
         <kbd>![AMA_Initial_Screen2](./images/media/AMA_Initial_Screen2.png)</kbd>
     
@@ -466,12 +466,12 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Workspace_Evaluation](./images/media/AMA_Workspace_Evaluation.png)</kbd>
     
-    4. An empty workspace will be created and you will be asked if you want to upload an existing data collection or if you want to use the Discovery Tool.
+    4. An empty workspace will be created, and you will be asked if you want to upload an existing data collection or if you want to use the Discovery Tool.
         <kbd>![AMA_Workspace_Evaluation_Create](./images/media/AMA_Workspace_Evaluation_Create.png)</kbd>
     
     5. Click on **Open discovery tool**.
         <kbd>![AMA_Workspace_Evaluation_Create2](./images/media/AMA_Workspace_Evaluation_Create2.png)</kbd>
-    The Discovery Tool panel opens and provides the option to download the tool, in addition it provides information how to use the tool. 
+    The Discovery Tool panel opens and provides the option to download the tool; in addition, it provides information how to use the tool. 
     6. Click on **Download discovery tool**.
     <kbd>![AMA_DiscoveryTool_Panel](./images/media/AMA_DiscoveryTool_Panel.png)</kbd>
 
@@ -492,7 +492,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     
 2. Use the AMA Discovery Tool to analyze the installed WebSphere Applications.
 
-    Run the AMA Discovery Tool against your WebSphere environment.After downloading the zipped Data Collector utility, it needs to be unpacked and run against a WebSphere Application server (WAS) to collect all the data of deployed applications and their configuration from the WAS server.
+    Run the AMA Discovery Tool against your WebSphere environment. After downloading the zipped Data Collector utility, it needs to be unpacked and run against a WebSphere Application server (WAS) to collect all the data of deployed applications and their configuration from the WAS server.
 
     1. Go back to the Terminal window and navigate the /home/itzuser/Downloads directory and view its contents with commands:
 
@@ -526,7 +526,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
         <kbd>![AMA_Discovery_Run_3](./images/media/AMA_Discovery_Run_3.png)</kbd>
         
         Change the domain and you can see that the command will change.
-        Finally switch back to the **IBM WebSphere** Domain. 
+        Finally, switch back to the **IBM WebSphere** Domain. 
 
         c. Select the Analysis type
         
@@ -534,7 +534,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Discovery_Run_4](./images/media/AMA_Discovery_Run_4.png)</kbd>
         
-        Change the analysis type and you can see that the command will change. Finally switch back to the **Apps & Configuration** analysis. 
+        Change the analysis type and you can see that the command will change. Finally, switch back to the **Apps & Configuration** analysis. 
         Selecting **Apps & Configuration** ensures that the application data and server configuration data is collected.
  
         The server configuration data is extremely helpful in Transformation Advisor to generate deployment artifacts in the migration bundle, which we will explore later in the lab.
@@ -560,18 +560,18 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Discovery_Run_7](./images/media/AMA_Discovery_Run_7.png)</kbd>
 
-        The license agreement will be displayed and you will be asked to accept it. 
+        The license agreement will be displayed, and you will be asked to accept it. 
         
         <kbd>![AMA_Discovery_Run_8](./images/media/AMA_Discovery_Run_8.png)</kbd>
         
 
         Type **1** to accept the license agreement and press **Enter**.
 
-    3. Wait until the analysis has completed. As you can see, 4 applications have been analyzed and the resulting data collection has been automatically uploaded. 
+    3. Wait until the analysis has completed. As you can see, 4 applications have been analyzed, and the resulting data collection has been automatically uploaded. 
 
         <kbd>![AMA_Discovery_Run_9](./images/media/AMA_Discovery_Run_9.png)</kbd>
     
-        The collection is also availabe as zip file in the directory where the dicsovery tool was called.
+        The collection is also available as zip file in the directory where the discovery tool was called.
 
             ls -l
 
@@ -602,7 +602,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     
     **IMPORTANT!**
     
-    As backup for this lab, we have already executed the the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into the AMA UI. 
+    As backup for this lab, we have already executed the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into the AMA UI. 
     ___
 
 ### 6.3.2 Assess the applications using AMA
@@ -617,10 +617,10 @@ In this section of the lab, you will explore assessment details for the **modres
 
     <kbd>![AMA_Assessment_Tab2](./images/media/AMA_Assessment_Tab2.png)</kbd>
 
-    You can see the assement details for the 4 applications and the efforts to modernize them them to Liberty.
+    You can see the assessment details for the 4 applications and the efforts to modernize them to Liberty.
     <kbd>![AMA_Evaluation_AllApplications](./images/media/AMA_Evaluation_AllApplications.png)</kbd>
 
-3. In the environment, the trial version of AMA is used. Therefore the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a permanent access key to unlock the option.
+3. In the environment, the trial version of AMA is used. Therefore, the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a permanent access key to unlock the option.
 
     <kbd>![AMA_Evaluation_Assessment_Trial](./images/media/AMA_Evaluation_Assessment_Trial.png)</kbd>
 
@@ -683,7 +683,7 @@ In this section of the lab, you will explore assessment details for the **modres
 
 ### 6.3.3  Examine the Liberty modernization assets generated by AMA
 
-AMA not only provides great insights about your applications that you consider modernizing to WebSphere Liberty, it also generates deployment accelerators for building and deploying the application on Liberty, containers, and Kubernetes based clouds. 
+AMA not only provides great insights about your applications that you consider modernizing to WebSphere Liberty, but it also generates deployment accelerators for building and deploying the application on Liberty, containers, and Kubernetes based clouds. 
 
 In this section, we take a quick peak at the **Liberty server configuration** `server.xml` that AMA generates, based on the analysis of the WebSphere configuration when the Transformation Advisor data collector was run against the WebSphere server on the VM.  
 
@@ -722,7 +722,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
 
     <kbd>![AMA_Evaluation_Assessment-modresorts9b.png](./images/media/AMA_Evaluation_Assessment-modresorts9b.png)</kbd>
 
-    c.	**Ressource configurations** like URLProviders, JDBC or JMS Provider, etc.
+    c.	**Resource configurations** like URLProviders, JDBC or JMS Provider, etc.
 
     <kbd>![AMA_Evaluation_Assessment-modresorts9c.png](./images/media/AMA_Evaluation_Assessment-modresorts9c.png)</kbd>
 
@@ -757,7 +757,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
     Next to the files mentioned before, the migration bundle contains several other files for Kubernetes deployment, for kustomization as well as placeholder files for the application and the JDBC drivers.
 
     As you can see, the migration plan contains a trial key.
-    As it is a migration plan created by a AMA Trial version, it can only be used with AMA Dev Tools if AMA Dev Tools have a license applied.
+    As it is a migration plan created by an AMA Trial version, it can only be used with AMA Dev Tools if AMA Dev Tools have a license applied.
 
 11. Click the browser window containing the AMA UI
 
@@ -802,7 +802,7 @@ You will need the migration plan in the next section.
 
 ### 6.4 Use the AMA Dev Tools
 
-Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools will help you to apply automated fixes and see teh remaining issues in the source code.
+Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools will help you to apply automated fixes and see the remaining issues in the source code.
 
 1. Open VS Code
 
@@ -836,7 +836,7 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_Walkthrough.png](./images/media/VSCode_Walkthrough.png)</kbd>
 
-    4. Finally close the panel called **Walkthrough: Setup VS Code**.
+    4. Finally, close the panel called **Walkthrough: Setup VS Code**.
         Also close the panel called **Chat**.
 
     5. If you see during the lab one of the pop-ups below or any other pop-up asking to install something, close the pop-up without installation by clicking the **X**. 
@@ -870,7 +870,7 @@ You will use both tools during the lab.
 #### Step 6.4.1: Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty.
 
-1. Start the modernization wizzard
+1. Start the modernization wizard
 
     1. Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
 
@@ -944,7 +944,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         Click on **Where to** and select **Paris**. 
 
-        You should see some errors in the display of weatherdata.
+        You should see some errors in the display of weather data.
 
         <kbd>![modresorts_unchanged_Liberty2.png](./images/media/modresorts_unchanged_Liberty2.png)</kbd>
 
@@ -972,9 +972,9 @@ In the section we will outline how AMA Dev Tools can help with the modernization
         <kbd>![modresorts_TestAppOnLiberty4](./images/media/modresorts_TestAppOnLiberty4.png)</kbd>
 
 
-2. Continue with the modernization wizzard
+2. Continue with the modernization wizard
 
-    1. Take again a look at the modernization wizzard. 
+    1. Take again a look at the modernization wizard. 
     As mentioned before, two of the identified issues are issues that need to be fixed.
 
         <kbd>![AMA_DevTools_AutomatedFixes1](./images/media/AMA_DevTools_AutomatedFixes1.png)</kbd>
@@ -1004,17 +1004,17 @@ In the section we will outline how AMA Dev Tools can help with the modernization
         As you can see, there is only one issue left.
         **The WebSphere Servlet API was superseded by a newer implementation**. 
 
-        Click on the issue related to **WebSphere Servlet API** and you can get more details about the issue including document links and a link to the source code. By default you would now have to read through the documentation to find out how to fix it. But there is an indication that there seems to be a fix in the IBM AI solution called watsonx Code Assistant (and therefore also in the successor IBM Bob.)
+        Click on the issue related to **WebSphere Servlet API** and you can get more details about the issue including document links and a link to the source code. By default, you would now have to read through the documentation to find out how to fix it. But there is an indication that there seems to be a fix in the IBM AI solution called watsonx Code Assistant (and therefore also in the successor IBM Bob.)
 
         You can also click on the link to see the source.
         <kbd>![AMA_DevTools_AutomatedFixes6](./images/media/AMA_DevTools_AutomatedFixes6.png)</kbd>
 
         The solution would be to replace the current encoding mechanism with another one that is supported by Liberty. 
-        You could for example use Apache Commons for this but this is out of scope for the lab. We leave the issue as is for now.
+        You could for example use Apache Commons for this, but this is out of scope for the lab. We leave the issue as is for now.
 
 3. Now that we resolved most of the issues, let's test again if the application now works smoother or still has the errors seen before.
 
-    1. Navigate to the Liebrty Dashboard.
+    1. Navigate to the Liberty Dashboard.
     2. Right-click on **modresorts** and select **Start** to start the application on Liberty
 
         <kbd>![modresorts_TestAppOnLiberty2](./images/media/modresorts_TestAppOnLiberty2.png)</kbd>
@@ -1029,7 +1029,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         Click on **Where to** and select **Paris**. 
 
-        You should no longer see any errors in the display of weatherdata.
+        You should no longer see any errors in the display of weather data.
 
         <kbd>![modresorts_modernized_Liberty2.png](./images/media/modresorts_modernized_Liberty2.png)</kbd>
 
@@ -1046,7 +1046,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
     
       
-You should now have a good understanding what the AMA Dev Tools provide. So close the modernization panel.  
+You should now have a good understanding what the AMA Dev Tools provide. So, close the modernization panel.  
 
 
 ### 6.5 Recap
@@ -1058,9 +1058,9 @@ Congratulations, you have finished the application modernization part.
 - You tested the unchanged application on Liberty to validate that the identified issues cause runtime errors and need to be fixed.
 - You used the AMA Dev Tools to apply automated fixes
 - You used the AMA Dev Tools to see how to handle self-directed fixes
-- You tested successfully the modenized application on Liberty
+- You tested successfully the modernized application on Liberty
 
-BTW: AMA Dev Tools also provide a wizzard to do a Java upgrade. 
+BTW: AMA Dev Tools also provide a wizard to do a Java upgrade. 
 
 
 ### 7 Lab Cleanup
@@ -1078,7 +1078,7 @@ BTW: AMA Dev Tools also provide a wizzard to do a Java upgrade.
 
 ## Summary
 
-In this lab, you learned how to assess a WebSphere application using IBM Application Modernization Accelerator. In addition you learned how to use the AMA Dev Tools to apply automated fixes and resolve other issues.
+In this lab, you learned how to assess a WebSphere application using IBM Application Modernization Accelerator. In addition, you learned how to use the AMA Dev Tools to apply automated fixes and resolve other issues.
 
 **Congratulations!**
 
