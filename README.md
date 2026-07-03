@@ -841,17 +841,18 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_Extensions1.png](./images/media/VSCode_Extensions1.png)</kbd>
 
-    2. The Liberty Dev Tools which provide an easy way to develop against Liberty
-        
+    2. Klick on the extension called **IBM Application Modernization Accelerator Developer Tools** (AMA Dev Tools). The AMA Dev Tools help to analyze the application based on source code. 
+
         <kbd>![VSCode_Extensions2.png](./images/media/VSCode_Extensions2.png)</kbd>
 
-    3. The AMA Dev Tools which hel to analyze the application
+    3. Klick on the extension called **Liberty Tools**. The Liberty tools provide an easy way to develop against Liberty
 
         <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
 
+    You will use both tools during the lab.
 
 
-## Step 3.1: Modernize to WebSphere Liberty using AMA Dev Tools
+#### Step 6.4.1: Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty but we will not perform the modernization as the AMA Dev Tools can only help partly.
 
 Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
