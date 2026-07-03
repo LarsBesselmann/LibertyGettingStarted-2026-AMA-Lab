@@ -805,20 +805,30 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
 1. Open a terminal window and switch to the project directory, then start VS Code.
 
-    cp ~/Student/modresorts-project
-    code . &
+        cp ~/Student/modresorts-project
+        code . &
 
 2. Take a look at the installed extensions
 
-    1. The Liberty Dev Tools which provide an easy way to develop against Liberty
-    2. The AMA Dev Tools which hel to analyze the application
+    1. Open the Extensions panel
+
+        <kbd>![VSCode_Extensions1.png](./images/media/VSCode_Extensions1.png)</kbd>
+
+    2. The Liberty Dev Tools which provide an easy way to develop against Liberty
+        
+        <kbd>![VSCode_Extensions2.png](./images/media/VSCode_Extensions2.png)</kbd>
+
+    3. The AMA Dev Tools which hel to analyze the application
+
+        <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
+
 
 
 
 ## Step 3.1: Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty but we will not perform the modernization as the AMA Dev Tools can only help partly.
 
-Switch to the **Explorer**, right-click on **src** and select **Moernize Java Applications > Modernize to Liberty**
+Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
 
 ![](./images/AMA_DevTools_ModernizeJavaApps.png)
 
@@ -838,8 +848,18 @@ AMA Dev Tools display the issues and for which of them automated fixes exist.
 
 ![](./images/AMA_DevTools_AutomatedFixes.png)
 
+But before continuing, let's try to run the application as is on Liberty.
+
+
+Access the Liberty Dashboard to start Liberty.
+
+
+
+
+
 As you can see, there is an automated fix for the **WSSecurityHelper** available.
-So you could click on the button **Run automated fixes** to download the recipe and apply the automated fix. (Do not perform the step as we will fix the issues later using IBM Bob)
+
+So you could click on the button **Run automated fixes** to download the recipe and apply the automated fix. (Do not perform the step as we will fix the issues later)
 Click on **Self-directed fixes**. As you can see, there is no automated fix available.
 
 ![](./images/AMA_DevTools_SelfDirectedFixes.png)
