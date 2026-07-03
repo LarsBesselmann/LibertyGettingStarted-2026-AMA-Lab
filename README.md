@@ -818,9 +818,8 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
 
 
-    2. Set the JDK to Java 8 and start VS Code.
+    2. Start VS Code.
 
-            . ~/scripts/set_Java8_temp.sh
             code . &
 
         Visual Studio Code UI will be opened.
@@ -871,39 +870,52 @@ You will use both tools during the lab.
 #### Step 6.4.1: Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty.
 
-1. Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
+1. Start the modernization wizzard
 
-    <kbd>![AMA_DevTools_ModernizeJavaApps.png](./images/media/AMA_DevTools_ModernizeJavaApps.png)</kbd>
+    1. Switch to the **Explorer**, right-click on **src** and select **Modernize Java Applications > Modernize to Liberty**
 
-2. Click on **Upload migration plan**
+        <kbd>![AMA_DevTools_ModernizeJavaApps.png](./images/media/AMA_DevTools_ModernizeJavaApps.png)</kbd>
 
-    <kbd>![AMA_DevTools_Upload_Migrationplan](./images/media/AMA_DevTools_Upload_Migrationplan.png)</kbd>
+    2. Click on **Upload migration plan**
+
+        <kbd>![AMA_DevTools_Upload_Migrationplan](./images/media/AMA_DevTools_Upload_Migrationplan.png)</kbd>
 
 
-3. Select the migration plan from the **ama** directory.
+    3. Select the migration plan from the **ama** directory.
 
     <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
 
     (You could also use the migration plan that you downloaded)
     Click on **Open**.
 
-4. Keep the **server.xml** file selected and click on **Proceed**.
+    4. Keep the **server.xml** file selected and click on **Proceed**.
 
-    <kbd>![AMA_DevTools_Upload_Migrationplan3](./images/media/AMA_DevTools_Upload_Migrationplan3.png)</kbd>
+        <kbd>![AMA_DevTools_Upload_Migrationplan3](./images/media/AMA_DevTools_Upload_Migrationplan3.png)</kbd>
 
+    5. AMA Dev Tools display the issues and for which of them automated fixes exist.
 
-
-
-
-AMA Dev Tools display the issues and for which of them automated fixes exist.
-
-    <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
+        <kbd>![AMA_DevTools_Issues_Overview](./images/media/AMA_DevTools_Issues_Overview.png)</kbd>
 
 
-But before continuing, let's try to run the application as is on Liberty.
+2. Test the application on Liberty
 
+    Before continuing with the modernization, let's try to run the application as is on Liberty.
 
-Access the Liberty Dashboard to start Liberty.
+    1. Open a VS Code Terminal
+
+        <kbd>![VSCode_Open_Terminal](./images/media/VSCode_Open_Terminal.png)</kbd>
+
+    2. Configure Liberty to use Java 8
+
+            echo "JAVA_HOME=/usr/lib/jvm/ibm-semeru-open-8-jdk" >> src/main/liberty/config/server.env
+
+    3. Expand the Liberty Dashboard and click on **Reload**.
+
+        <kbd>![modresorts_TestAppOnLiberty1](./images/media/modresorts_TestAppOnLiberty1.png)</kbd>
+
+    4. Right-click on modresorts and select Start to start the application on Liberty
+
+        <kbd>![modresorts_TestAppOnLiberty2](./images/media/modresorts_TestAppOnLiberty2.png)</kbd>
 
 
 
