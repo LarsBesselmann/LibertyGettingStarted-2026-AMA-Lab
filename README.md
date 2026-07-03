@@ -1078,11 +1078,11 @@ BTW: AMA Dev Tools also provide a wizzard to do a Java upgrade.
 
 ## Summary
 
-In this lab, you learned how to assess a WebSphere application using IBM Application Modernization Accelerator.
+In this lab, you learned how to assess a WebSphere application using IBM Application Modernization Accelerator. In addition you learned how to use the AMA Dev Tools to apply automated fixes and resolve other issues.
 
 **Congratulations!**
 
-**You have successfully completed the lab "Liberty Getting Started"**
+**You have successfully completed the lab "Application Modernization Accelerator"**
 
 # Troubleshooting
 <details>
