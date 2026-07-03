@@ -299,12 +299,14 @@ Then you will use the AMA Dev Tools to make the required code changes.
 
 The objective of this section is to assess the simple-pharmacy application that has been deployed to a traditional WAS 9 instance.
 
-### 6.3.1 Build the WAS appplication
+### 6.3.1 Build the WAS application
 
 1. Clone the repository to get access to the application binaries and more.
 
-        git clone https://github.com/LarsBesselmann/sample-app-mod-ama ~/Student/modresorts-project
-
+        rm -rf ~/Student/temprepo/
+        git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/Student/temprepo
+        mv ~/Student/temprepo/modresorts-project ~/Student
+        rm -rf ~/Student/temprepo/
 
 2. Install the required WAS library
 
