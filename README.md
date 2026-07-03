@@ -131,7 +131,7 @@ Later on, you will create another workspace for the WebSphere landscape used in 
 
         <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
 
-    2. Access the AMA User Interface via the URL http://localhost:30000
+    2. Access the AMA User Interface via the URL https://localhost:3000
 
 
         <kbd>![AMA_Initial_Screen](./images/media/AMA_Initial_Screen.png)</kbd>
