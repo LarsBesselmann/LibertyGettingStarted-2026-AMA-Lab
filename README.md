@@ -620,7 +620,7 @@ In this section of the lab, you will explore assessment details for the **modres
     You can see the assessment details for the 4 applications and the efforts to modernize them to Liberty.
     <kbd>![AMA_Evaluation_AllApplications](./images/media/AMA_Evaluation_AllApplications.png)</kbd>
 
-3. In the environment, the trial version of AMA is used. Therefore, the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a permanent access key to unlock the option.
+3. In the environment, the trial version of AMA is used. Therefore, the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a different access key to unlock the option.
 
     <kbd>![AMA_Evaluation_Assessment_Trial](./images/media/AMA_Evaluation_Assessment_Trial.png)</kbd>
 
@@ -756,10 +756,8 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
 
     Next to the files mentioned before, the migration bundle contains several other files for Kubernetes deployment, for kustomization as well as placeholder files for the application and the JDBC drivers.
 
-    As you can see, the migration plan contains a trial key.
-    As it is a migration plan created by an AMA Trial version, it can only be used with AMA Dev Tools if AMA Dev Tools have a license applied.
 
-11. Click the browser window containing the AMA UI
+11. Close the browser window containing the AMA UI.
 
 
 ### 6.3.8 Recap
