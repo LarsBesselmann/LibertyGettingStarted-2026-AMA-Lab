@@ -74,7 +74,7 @@ The following prerequisites must be completed prior to beginning this lab:
 
 The lab is written for a lab environment hosted by IBM and the software is already installed.
 
-As IBMer or IBM Business Partner, you can find the related TechZone environment here:
+As IBMer, you can find the related TechZone environment here:
 https://techzone.ibm.com/collection/liberty-getting-started-labs-demos/environments
 The environment is named **Application Modernization VM - for Liberty, AMA, IBM Bob**.
 
