@@ -74,6 +74,10 @@ The following prerequisites must be completed prior to beginning this lab:
 
 The lab is written for a lab environment hosted by IBM and the software is already installed.
 
+You can find the related TechZone environment here:
+https://techzone.ibm.com/collection/liberty-getting-started-labs-demos/environments
+The environment is named **Application Modernization VM - for Liberty, AMA, IBM Bob**.
+
 The following software has been installed:
 - Java 17 or beyond 
 - Maven
