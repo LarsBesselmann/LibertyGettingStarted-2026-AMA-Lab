@@ -119,7 +119,9 @@ Let's check if AMA is already started. This can be validated by reviewing if the
     If AMA **is available** (see screenshot below), enter **q** to quit the menu and keep AMA running. 
 
     <kbd>![AMA_Launcher](./images/media/AMA_Launcher.png)</kbd>
-        
+
+    If AMA is avalable, enter **q** to quit the script.
+
     If AMA is **not running** (see screenshot below), enter **5** to start AMA. 
     <kbd>![AMA_Launcher_stopped](./images/media/AMA_Launcher_stopped.png)</kbd>
         
