@@ -556,7 +556,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
     1. Go back to the Terminal window and navigate the directory where the AMA Discovery Tool was extracted, then list the content:
 
-            cd ~/Student/ama-discovery-4.6.3
+            cd ~/Student/ama-discovery-*
             ls -l
 
         <kbd>![AMA_Discovery_Run_6](./images/media/AMA_Discovery_Run_6.png)</kbd>
