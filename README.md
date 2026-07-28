@@ -184,15 +184,21 @@ Later on, you will create another workspace for the WebSphere landscape used in 
     
 
     4. The **Visualization** panel shows all applications and how they relate to each other regarding common databases or queues.
-    Zoom in to see the application names.
+
+        As this is a AMA trial version, a pop-up will be shown in the upper right. Close the pop-up.
+
+        <kbd>![AMA_Visualization_SampleData_PoC](./images/media/AMA_Visualization_SampleData_PoC.png)</kbd>
+
+        Now zoom in to see the application names.
+
 
         <kbd>![AMA_Visualization_SampleData_Increased](./images/media/AMA_Visualization_SampleData_Increased.png)</kbd>
     
-        You can filter by name to see only specific applications and dependencies.
+        You can filter by name to see only specific applications and dependencies. (For example, filter for the application ACME.)
 
         <kbd>![AMA_Visualization_Filter_by_Name](./images/media/AMA_Visualization_Filter_by_Name.png)</kbd>
     
-        You can also filter by library to see only specific applications and dependencies.
+        You can also filter by library to see only specific applications and dependencies. (For example, filter for Spring libraries.)
 
         <kbd>![AMA_Visualization_Filter_by_Library](./images/media/AMA_Visualization_Filter_by_Library.png)</kbd>
     
