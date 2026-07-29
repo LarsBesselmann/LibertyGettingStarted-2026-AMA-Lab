@@ -2,8 +2,9 @@
 
 <kbd>![Toolbar_terminal](./images/media/AMA_Visualization_SampleData.png)</kbd>
 
+**DRAFT**
 
-**Last updated:** July 2026
+**Last updated:** July 2026 - Update to AMA v5
 
 **Duration:** 90 minutes
 
