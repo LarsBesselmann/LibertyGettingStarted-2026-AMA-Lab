@@ -494,7 +494,8 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
     6. Click on **Download discovery tool**.
     <kbd>![AMA_DiscoveryTool_Panel](./images/media/AMA_DiscoveryTool_Panel.png)</kbd>
 
-        If you get a warning, that there is a potential security risk, click on **Advanced** and then **Accept the Risk and Continue**. 
+        The discovery tool package will be generated and prepared for download.
+        Once done, you will likely get a warning, that there is a potential security risk, click on **Advanced** and then **Accept the Risk and Continue**. 
 
         <kbd>![AMA_Potential_Security_Risk](./images/media/AMA_Potential_Security_Risk3.png)</kbd>
 
@@ -526,7 +527,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
             tar xvfz DiscoveryTool-Linux_Evaluation.tgz -C ~/Student
 
-        The Discovery Tool will be extracted to ~/Student/ama-discovery-4.6.3 directory.
+        The Discovery Tool will be extracted to ~/Student/ama-discovery-5.0.0 directory.
 
         Note: At this point, the data collector is ready to execute against a WebSphere environment.
 
@@ -590,15 +591,19 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         <kbd>![AMA_Discovery_Run_9](./images/media/AMA_Discovery_Run_9.png)</kbd>
     
-        The collection is also available as zip file in the directory where the discovery tool was called.
+        The collection is also available as zip file in the directory where the discovery tool was called. It is named like the WAS profile.
 
             ls -l
 
         <kbd>![AMA_Discovery_Run_10](./images/media/AMA_Discovery_Run_10.png)</kbd>
 
 
-        Comment: In the lab, the process only takes a couple of seconds. In a real scenario, the process typically takes some time to complete, depending on how many applications are deployed on the WebSphere Application server and the complexity of the applications. 
-        As this process consumes some CPU and memory, it is not recommended to run the discovery tool in production.
+        Comments: 
+        - In the lab, the process only takes a couple of seconds. In a real scenario, the process typically takes some time to complete, depending on how many applications are deployed on the WebSphere Application server and the complexity of the applications. As this process consumes some CPU and memory, it is not recommended to run the discovery tool in production.
+        - You might have recognized that the WebSphere applications were discovered even though the WebSphere instances were stopped. This is due to the fact that the discovery tools looks into the WebSphere files instead of connecting to a running instance.
+        - In the lab environment, the discovery tool can connect to the **AMA** instance via port 2220. Therefore the collected data has been automatically uploaded. If this is not the case, you must copy over the data collection zip to another system and manually upload the data to **AMA** from that system before you can view the results. 
+        - You can also specify in the ama-discovery command not to upload the data collection automatically. 
+
 
     4. Return to the AMA UI in the Web browser and you can see that the data collection has been uploaded. 
     
@@ -615,13 +620,10 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
         You can see the 4 applications that have been discovered.
 
-
-    In general, if your application server and **AMA** are in the same network infrastructure, the collected data will be automatically uploaded to **AMA** for you  to view the analysis results. 
-    Otherwise, you must manually upload the data to **AMA** before you can view the results. You could also specify not to upload the data collection automatically.
     
     **IMPORTANT!**
     
-    As backup for this lab, we have already executed the collector on a WebSphere Application Server. And the resulting data collection archive (zip file) named AppSrv01.zip is provided for you to upload into the AMA UI. 
+    As backup for this lab, we have already executed the discovery tool. The resulting data collection archive (zip file) named is provided as backup if needed here: ~/Student/modresorts-project/ama/Dmgr01.zip. 
     ___
 
 ### 6.3.2 Assess the applications using AMA
