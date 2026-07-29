@@ -280,7 +280,10 @@ Application Modernization Accelerator (AMA) also provides Swagger interfaces to 
 
 2. Look at the different APIs which allow to create a new workspace, upload a data collection or bulk, upload the license key and much more.
 
-    The create for example the demo workspace which you just created manually, you could use the following command:
+    Scroll down to the section **collection archives**.
+    <kbd>![AMA_Swagger_APIs2.png](./images/media/AMA_Swagger_APIs2.png)</kbd>
+
+    To create for example the demo workspace which you just created manually, you could use the **uploadSampleData** API via the following command:
 
         curl -k -X 'POST' \
         'https://localhost:2220/lands_advisor/advisor/v2/collectionArchives/uploadSampleData' \
