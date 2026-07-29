@@ -334,9 +334,9 @@ Then you will use the AMA Dev Tools to make the required code changes.
 
 1. Create the Student directories and some sub-directories used in the lab with commands:
 
-        mkdir ~/Student
-        mkdir ~/Student/assets
-        mkdir ~/Student/backup
+       mkdir ~/Student
+       mkdir ~/Student/assets
+       mkdir ~/Student/backup
 
 ### 6.3 Build and deploy the WebSphere applications
 
@@ -346,16 +346,16 @@ The objective of this section is to assess the simple-pharmacy application that 
 
 1. Clone the repository to get access to the application binaries and more.
 
-        rm -rf ~/Student/temprepo/
-        git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/Student/temprepo
-        mv ~/Student/temprepo/modresorts-project ~/Student
-        rm -rf ~/Student/temprepo/
+       rm -rf ~/Student/temprepo/
+       git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/Student/temprepo
+       mv ~/Student/temprepo/modresorts-project ~/Student
+       rm -rf ~/Student/temprepo/
 
 2. Install the required WAS library
 
-        cd ~/Student/modresorts-project/
+       cd ~/Student/modresorts-project/
 
-        mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
+       mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
 
     Make sure that the build is successful.
 
@@ -363,7 +363,7 @@ The objective of this section is to assess the simple-pharmacy application that 
 
 3. Build the application
     
-        mvn clean package
+       mvn clean package
 
     <kbd>![modresorts_mvn_build_tWAS_1.png](./images/media/modresorts_mvn_build_tWAS_1.png)</kbd>
 
