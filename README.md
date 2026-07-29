@@ -409,7 +409,7 @@ The application has not been installed to traditional WAS so far. You will now p
     <kbd>![tWAS_install_modresorts](./images/media/tWAS_install_modresorts.png)</kbd>
 
 
-4. Set the URLProvider using wsadmin by entering the following commands:
+4. Set the URLProvider which is used by the modresorts application via wsadmin by entering the following commands:
 
         ~/usr/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -f ./setURLProvider.py
 
@@ -433,7 +433,8 @@ The application has not been installed to traditional WAS so far. You will now p
 
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_1.png)</kbd>
 
-    3. Click on **Where to** and switch to Paris or another city. 
+
+    3. Click on **Where to?** and switch to Paris or another city. 
     (If the button does not work, make sure that the browser is in full-screen.)
 
     <kbd>![Toolbar_firefox](./images/media/modresorts_tWAS_2.png)</kbd>
