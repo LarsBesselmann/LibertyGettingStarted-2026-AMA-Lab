@@ -15,7 +15,7 @@ Need support? Contact **Lars Besselmann, Lars.Besselmann@de.ibm.com**
 
 
 
-## Explore Application Modernization Accelerator
+## About Application Modernization Accelerator
 
 This lab provides fundamental hands-on experience of the evaluation process of WebSphere application for their modernization journey to Liberty. It shows the value of using Application Modernization Accelerator (AMA) to evaluate on-premises Java applications.
 
@@ -781,7 +781,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
 11. Close the browser window containing the AMA UI.
 
 
-### 6.3.8 Recap
+### 6.8 Recap
 
 Congratulations, you have finished the application assessment part.
 
@@ -794,7 +794,7 @@ Congratulations, you have finished the application assessment part.
 - You generated a migration plan
 
 
-### 6.3.9 Troubleshooting
+### 6.9 Troubleshooting
 
 You will need the migration plan in the next section. 
 
@@ -819,9 +819,11 @@ You will need the migration plan in the next section.
 
 <br>
 
-### 6.4 Use the AMA Dev Tools
+## 7. Use the AMA Dev Tools
 
 Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools will help you to apply automated fixes and see the remaining issues in the source code.
+
+### 7.1 Explore the Visual Studio Code installation and extensions
 
 1. Open VS Code
 
@@ -885,8 +887,7 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
     
 You will use both tools during the lab.
 
-
-#### Step 6.4.1: Modernize to WebSphere Liberty using AMA Dev Tools
+### 7.2 Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty.
 
 1. Start the modernization wizard
@@ -1067,8 +1068,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
       
 You should now have a good understanding what the AMA Dev Tools provide. So, close the modernization panel.  
 
-
-### 6.5 Recap
+### 7.3 Recap
 
 Congratulations, you have finished the application modernization part.
 
@@ -1082,7 +1082,7 @@ Congratulations, you have finished the application modernization part.
 BTW: AMA Dev Tools also provide a wizard to do a Java upgrade. 
 
 
-### 7 Lab Cleanup
+## 8 Lab Cleanup
 
 1. Once you are done, make sure that Liberty and Visual Studio Code is not running.
 
