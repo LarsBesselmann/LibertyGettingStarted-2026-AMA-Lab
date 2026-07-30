@@ -910,21 +910,21 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
 ### 7.1 Explore the Visual Studio Code installation and extensions
 
-1. Open VS Code
+1. Initialize git
 
-    1. Open a terminal window and switch to the project directory, then initialize git.
+    Open a terminal window and switch to the project directory, then initialize git.
 
-            cd ~/Student/modresorts-project
-            git init
-            git config --global user.name "John Doe"
-            git config --global user.email john.doe@noreply
+        cd ~/Student/modresorts-project
+        git init
+        git config --global user.name "John Doe"
+        git config --global user.email john.doe@noreply
 
-            git add .
-            git commit -a -m "Initial project"
+        git add .
+        git commit -a -m "Initial project"
 
+2. Open VS Code
 
-
-    2. Start VS Code.
+    1. Start VS Code.
 
             code . &
 
@@ -952,7 +952,23 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
         <kbd>![VSCode_Popup2.png](./images/media/VSCode_Popup2.png)</kbd>
 
 
-2. Take a look at the installed extensions
+    6. Look at the bottom left of your VS Code window to find out if VS Code runs in **Restricted Mode**
+    
+        <kbd>![VSCode_RestrictedMode2.png](./images/media/VSCode_RestrictedMode2.png)</kbd>
+
+        If so, click on the field *Restricted Mode* to open the panel.
+
+        <kbd>![VSCode_RestrictedMode1.png](./images/media/VSCode_RestrictedMode1.png)</kbd>
+
+        Then click on **Trust** to make this workspace trusted.
+        <kbd>![VSCode_RestrictedMode3.png](./images/media/VSCode_RestrictedMode3.png)</kbd>
+
+        Finally close the pop-up by clicking on **X**.
+        <kbd>![VSCode_RestrictedMode4.png](./images/media/VSCode_RestrictedMode4.png)</kbd>
+
+
+
+3. Take a look at the installed extensions
 
     1. Open the Extensions panel
 
@@ -962,15 +978,17 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_Extensions2.png](./images/media/VSCode_Extensions2.png)</kbd>
 
-        Close the AMA Dev Tools Extensions panel.
+        Look at the details, then close the AMA Dev Tools Extensions panel.
+        You might have a newer version displayed.
 
     3. Click on the extension called **Liberty Tools**. The Liberty tools provide an easy way to develop against Liberty
 
         <kbd>![VSCode_Extensions3.png](./images/media/VSCode_Extensions3.png)</kbd>
 
-        Close the Liberty Tools Extension panel.
+        Look at the details, then close the Liberty Tools Extension panel.
+        You might have a newer version displayed.
     
-You will use both tools during the lab.
+    You will use both tools during the lab.
 
 ### 7.2 Modernize to WebSphere Liberty using AMA Dev Tools
 In the section we will outline how AMA Dev Tools can help with the modernization to Liberty.
@@ -981,17 +999,22 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         <kbd>![AMA_DevTools_ModernizeJavaApps.png](./images/media/AMA_DevTools_ModernizeJavaApps.png)</kbd>
 
+    2. An introduction panel is displayed.
+    
+        <kbd>![AMA_DevTools_ModernizeJavaApps2](./images/media/AMA_DevTools_ModernizeJavaApps2.png)</kbd>
+
+
+
     2. Click on **Upload migration plan**
 
         <kbd>![AMA_DevTools_Upload_Migrationplan](./images/media/AMA_DevTools_Upload_Migrationplan.png)</kbd>
 
 
-    3. Select the migration plan from the **ama** directory.
+    3. Select the migration plan from the **downloads** directory.
 
-    <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
+        <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
 
-    (You could also use the migration plan that you downloaded)
-    Click on **Open**.
+        Click on **Open**.
 
     4. Keep the **server.xml** file selected and click on **Proceed**.
 
@@ -1020,6 +1043,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
     2. Configure Liberty to use Java 8
 
+            cd ~/Student/modresorts-project
             echo "JAVA_HOME=/usr/lib/jvm/ibm-semeru-open-8-jdk" >> src/main/liberty/config/server.env
 
         <kbd>![modresorts_TestAppOnLiberty0](./images/media/modresorts_TestAppOnLiberty0.png)</kbd>
