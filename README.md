@@ -1041,7 +1041,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         <kbd>![VSCode_Open_Terminal](./images/media/VSCode_Open_Terminal.png)</kbd>
 
-    2. Configure Liberty to use Java 8
+    2. Configure Liberty to use Java 8. This is done via the Liberty configuration file **server.env**.
 
             cd ~/Student/modresorts-project
             echo "JAVA_HOME=/usr/lib/jvm/ibm-semeru-open-8-jdk" >> src/main/liberty/config/server.env
@@ -1108,7 +1108,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         <kbd>![AMA_DevTools_AutomatedFixes1](./images/media/AMA_DevTools_AutomatedFixes1.png)</kbd>
 
-    2. Click on the button **Run automated fixes** to download the recipe and apply the automated fixes. 
+    2. Click on the button **Run automated fixes** to download the recipes and apply the automated fixes. 
 
         The AMA Dev Tools will download the required recipes and will execute them.
 
@@ -1118,7 +1118,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
          <kbd>![AMA_DevTools_AutomatedFixes3](./images/media/AMA_DevTools_AutomatedFixes3.png)</kbd>
 
-        The application source code will be scanned to identify which issues have already been resolved and if new issues arised.
+        The application source code will be rebuilt and scanned to identify which issues have already been resolved and if new issues arised.
 
     4. Review the updated list of issues.
     
@@ -1126,7 +1126,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
 
         As you can see, the recipes did not only fix the issues that were listed under **Automated fixes** but also one of the issues listed under **Self-directed fixes**.
 
-    5. Click on **Self-directed fixes**. 
+    5. Click on **Self-directed fixes** and expand the issue. 
 
         <kbd>![AMA_DevTools_AutomatedFixes5](./images/media/AMA_DevTools_AutomatedFixes5.png)</kbd>
 
