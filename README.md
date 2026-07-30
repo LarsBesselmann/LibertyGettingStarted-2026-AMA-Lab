@@ -630,6 +630,8 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
 
 In this section of the lab, you will explore assessment details for the **modresorts** application. 
 
+#### 6.5.1 Assess the applications using the AMA Trial
+
 1. In the AMA Visualization View, you can see that the modresorts application has no connections to a database or queue.
  
     <kbd>![AMA_Visualization_Evaluation](./images/media/AMA_Visualization_Evaluation2.png)</kbd>
@@ -641,7 +643,7 @@ In this section of the lab, you will explore assessment details for the **modres
     You can see the assessment details for the 4 applications and the efforts to modernize them to Liberty.
     <kbd>![AMA_Evaluation_AllApplications](./images/media/AMA_Evaluation_AllApplications.png)</kbd>
 
-3. In the environment, the trial version of AMA is used. Therefore, the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a different access key to unlock the option.
+3. In the environment, the trial version of AMA is used. Therefore, the assessment of the applications for higher Java SE level or Java EE level is only supported for sample data workspaces but not in this workspace. You would need a different access key to unlock the option. This will be done later.
 
     <kbd>![AMA_Evaluation_Assessment_Trial](./images/media/AMA_Evaluation_Assessment_Trial.png)</kbd>
 
@@ -663,12 +665,12 @@ In this section of the lab, you will explore assessment details for the **modres
         <kbd>![AMA_Evaluation_Assessment-modresorts.png](./images/media/AMA_Evaluation_Assessment-modresorts.png)</kbd>
 
     
-    3. Expand the **`Complexity Rules`** for moving the application to WebSphere Liberty. 
+    3. Scroll down to the section **`Complexity Score`** and expand the list of issues. 
 
         <kbd>![AMA_Evaluation_Assessment-modresorts2.png](./images/media/AMA_Evaluation_Assessment-modresorts2.png)</kbd>
 
 
-        From this view, you get insights into the related issues that may require code changes or configuration changes. 
+        Here, you get insights into the related issues that may require code changes or configuration changes. 
 
         *In this example, there is 5 issues of which 3 have an automated fix:*
 
@@ -682,11 +684,21 @@ In this section of the lab, you will explore assessment details for the **modres
 
         <kbd>![AMA_Evaluation_Assessment-modresorts3.png](./images/media/AMA_Evaluation_Assessment-modresorts3.png)</kbd>
 
-    4. Scroll down to the section about unique code issues and expand it.
+    4. Scroll down to the section **Issues**. 
+
+        As you can see, there are no issues in common code.
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts3a.png](./images/media/AMA_Evaluation_Assessment-modresorts3a.png)</kbd>
+
+        Under **Unique Code Issues**, expand the list of **Technology issues**.
 
         <kbd>![AMA_Evaluation_Assessment-modresorts4.png](./images/media/AMA_Evaluation_Assessment-modresorts4.png)</kbd>
 
-        Expand any of the 5 issues and you can get more details about the issue, recommended changes and which code is impacted.
+        Expand any of the 5 issues and you can get more details about the issue, recommended changes and which code is impacted. But this capability is not available with a trial access key.
+
+        <kbd>![AMA_Evaluation_Assessment-modresorts4.png](./images/media/AMA_Evaluation_Assessment-modresorts4a.png)</kbd>
+        You will come back to this section later when the PoC access key has been applied.
+
 
     5. In addition to the information in the view, AMA also provides different kinds of reports:
 
@@ -696,11 +708,22 @@ In this section of the lab, you will explore assessment details for the **modres
        
         - The **Technology Report** identifies the editions of WebSphere Application Server that are best suited to run the application. The report provides a list of Java EE programming models that are used by the application and indicates which platforms will support the application.
 
-        - The **Analysis Report** does a deep dive on the preferred migration target to help you understand any migration issues, like deprecated or removed APIs, Java SE version differences, and Java EE behavioural differences. Note that Application Modernization Accelerator uses a rule system based on commonly occurring events that are seen in real applications to enhance the base reports and provide practical guidance. As a result, some items may show a different severity level in Application Modernization Accelerator than they do in the detailed binary scanner reports.
+        - The **Analysis Report** does a deep dive on the preferred migration target to help you understand any migration issues, like deprecated or removed APIs, Java SE version differences, and Java EE behavioural differences. Note that Application Modernization Accelerator uses a rule system based on commonly occurring events that are seen in real applications to enhance the base reports and provide practical guidance. As a result, some items may show a different severity level in Application Modernization Accelerator than they do in the detailed binary scanner reports. 
+
+        The **Analysis Report** is greyed out and not available with an AMA trial access key.
+        Feel free to look at the other two reports.
+
+    
+    Scroll to the top and you can see that the migration plan is locked.
+
+    <kbd>![AMA_Evaluation_Assessment-migrationplan-locked.png](./images/media/AMA_Evaluation_Assessment-migrationplan-locked.png)</kbd>
+
+
+#### 6.5.2 Assess the applications using the AMA PoC key
+Now lets apply an AMA Access Key so that we get access to the analysis detals and the migration plan.
 
 
 
-       
 
 ### 6.6  Examine the Liberty modernization assets generated by AMA
 
