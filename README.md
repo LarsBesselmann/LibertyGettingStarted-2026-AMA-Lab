@@ -847,7 +847,7 @@ Simply put, AMA creates the server.xml file that contains the Liberty server con
 
     <kbd>![AMA_Evaluation_Assessment-modresorts11.png](./images/media/AMA_Evaluation_Assessment-modresorts11.png)</kbd>
 
-    The migration plan will be downloaded to the Downloads folder
+    The migration plan will be downloaded to the Downloads directory.
     <kbd>![AMA_Evaluation_Assessment-modresorts12.png](./images/media/AMA_Evaluation_Assessment-modresorts12.png)</kbd>
 
     
@@ -1008,7 +1008,7 @@ In the section we will outline how AMA Dev Tools can help with the modernization
         <kbd>![AMA_DevTools_Upload_Migrationplan](./images/media/AMA_DevTools_Upload_Migrationplan.png)</kbd>
 
 
-    3. Select the migration plan from the **downloads** directory.
+    3. Select the migration plan from the **Downloads** directory.
 
         <kbd>![AMA_DevTools_Upload_Migrationplan2](./images/media/AMA_DevTools_Upload_Migrationplan2.png)</kbd>
 
