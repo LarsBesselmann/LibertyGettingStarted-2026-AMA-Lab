@@ -938,12 +938,15 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         <kbd>![VSCode_TrustAuthor.png](./images/media/VSCode_TrustAuthor.png)</kbd>
 
-    3. On the panel called **Walkthrough: Setup VS Code**, you can change the theme. The lab document uses as color **Light+**. Feel free to adjust the theme to your choice. 
+    3. On the Welcome Panel you can open the Walkthrough which allows to change the VS Code settings like theme and other settings. 
+
+        <kbd>![VSCode_Welcome.png](./images/media/VSCode_Welcome.png)</kbd>
+
+        On the panel called **Walkthrough: Setup VS Code**, you can change the theme. The lab document uses as color **Light+**. Feel free to adjust the theme to your choice. 
 
         <kbd>![VSCode_Walkthrough.png](./images/media/VSCode_Walkthrough.png)</kbd>
 
-    4. Finally, close the panel called **Walkthrough: Setup VS Code**.
-        Also close the panel called **Chat**.
+    4. Finally, close the panel called **Walkthrough: Getting started with VS Code** and the **Welcome** panel. Also close the panel called **Chat**.
 
     5. If you see during the lab one of the pop-ups below or any other pop-up asking to install something, close the pop-up without installation by clicking the **X**. 
 
