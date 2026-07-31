@@ -601,7 +601,7 @@ To evaluate on-premises Java applications, you need to run the AMA Discovery Too
         Comments: 
         - In the lab, the process only takes a couple of seconds. In a real scenario, the process typically takes some time to complete, depending on how many applications are deployed on the WebSphere Application server and the complexity of the applications. As this process consumes some CPU and memory, it is not recommended to run the discovery tool in production.
         - You might have recognized that the WebSphere applications were discovered even though the WebSphere instances were stopped. This is due to the fact that the discovery tools looks into the WebSphere files instead of connecting to a running instance.
-        - In the lab environment, the discovery tool can connect to the **AMA** instance via port 2220. Therefore the collected data has been automatically uploaded. If this is not the case, you must copy over the data collection zip to another system and manually upload the data to **AMA** from that system before you can view the results. 
+        - In the lab environment, the discovery tool can connect to the AMA instance via port 2220. Therefore the collected data has been automatically uploaded. If this is not the case, you must copy over the data collection zip to another system and manually upload the data to AMA from that system before you can view the results. 
         - You can also specify in the ama-discovery command not to upload the data collection automatically. 
 
 
@@ -899,7 +899,7 @@ You will need the migration plan in the next section.
       
 3. Copy the migration plan to the Downloads directory
 
-        cp ~/Student/modresorts-project/ama/modresorts-2_0_0_war.ear_migrationPlan.zip ~/Downloads/
+        cp ~/software/AMA/modresorts/modresorts-2_0_0_war.ear_migrationPlan.zip ~/Downloads/
 
 
 <br>
