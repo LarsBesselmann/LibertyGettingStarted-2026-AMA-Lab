@@ -75,8 +75,10 @@ The lab is written for a lab environment hosted by IBM and the software is alrea
 
 As IBMer, you can request the related TechZone environment here:
 
-- Collection: https://techzone.ibm.com/collection/liberty-getting-started-labs-demos
-- Environment: **Application Modernization VM - for Liberty, AMA, IBM Bob**.
+- Collection: https://techzone.ibm.com/collection/liberty-getting-started-labs-demos/journey-modernization-tools
+- Environment: **Application Modernization VM - for Liberty, AMA v5, IBM Bob**.
+
+    (Please be aware that there is also an environemtn for AMA v4)
 
 The following software has been installed:
 - Java 17 or beyond 
