@@ -1205,10 +1205,11 @@ The AMA Dev Tools have another capability next to "Modernize to Liberty" and thi
 
     2. An introduction panel is displayed.
 
-        As you can see in the screenshot, you could also update to a higher Java SE or/and Java EE level with a full access key.
+        As you can see in the screenshot, you could update to a higher Java SE or/and Java EE level if you would have a full access key.
     
         <kbd>![AMA_DevTools_JavaUpgrade2](./images/media/AMA_DevTools_JavaUpgrade2.png)</kbd>.
 
+        Alternatively you could go back to AMA, change the target to the desired Java SE and EE level and generate a new migration plan.
       
 You should now have a good understanding what the AMA Dev Tools provide. So, close the modernization panel.  
 
