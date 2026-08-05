@@ -930,13 +930,20 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
         Visual Studio Code UI will be opened.
 
-    2. If you get a pop-up that Authentication is required, enter **IBMDem0s!** in both fields and select **Continue**.
+    2. You might see the one or other panel:
     
-        <kbd>![VSCode_Keyring.png](./images/media/VSCode_Keyring.png)</kbd>
+        1. If you get a pop-up that Authentication is required, enter **IBMDem0s!** in both fields and select **Continue**.
+    
+            <kbd>![VSCode_Keyring.png](./images/media/VSCode_Keyring.png)</kbd>
 
-        Click on **Yes, I trust the authors** to continue.
+        2. If you get a pop-up that Authentication is required, click on **Yes, I trust the authors** to continue.
 
-        <kbd>![VSCode_TrustAuthor.png](./images/media/VSCode_TrustAuthor.png)</kbd>
+            <kbd>![VSCode_TrustAuthor.png](./images/media/VSCode_TrustAuthor.png)</kbd>
+
+        3. If you see the panel to sign in for Copilot, select to continue without signin or close the panel.
+        <kbd>![VSCode_Signup.png](./images/media/VSCode_Signup.png)</kbd>
+
+
 
     3. On the Welcome Panel you can open the Walkthrough which allows to change the VS Code settings like theme and other settings. 
 
