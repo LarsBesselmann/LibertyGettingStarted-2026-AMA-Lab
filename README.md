@@ -720,9 +720,15 @@ In this section of the lab, you will explore assessment details for the **modres
 
 
 #### 6.5.2 Assess the applications using the AMA PoC key
-Now lets apply an AMA Access Key so that we get access to the analysis detals and the migration plan.
+Now lets apply an AMA Access Key so that you get access to the analysis detals and the migration plan. 
 
-**Apply the AMA access key**
+This section explains how to apply the access key via AMA User Interface. You could also run the following command to apply the key:
+
+        sh ~/software/AMA/AMA_apply_PoC_Key.sh 
+
+
+**Apply the AMA access key via User Interface**
+
 
 1. Click on **Trial days left** on the top of the page
 
