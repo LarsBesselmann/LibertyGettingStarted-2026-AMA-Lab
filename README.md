@@ -896,8 +896,19 @@ You will need the migration plan in the next section.
         git clone https://github.com/LarsBesselmann/LibertyGettingStarted-2026-AMA-Lab ~/Student/temprepo
         mv ~/Student/temprepo/modresorts-project ~/Student
         rm -rf ~/Student/temprepo/
+
+
+3. Install the required WAS library
+
+        cd ~/Student/modresorts-project/
+
+        mvn install:install-file -Dfile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public.jar -DpomFile=/home/itzuser/usr/IBM/WebSphere/AppServer/dev/was_public-9.0.0.pom
+
+    Make sure that the build is successful.
+
+    <kbd>![mvn-install_WAS_library](./images/media/mvn-install_WAS_library.png)</kbd>
       
-3. Copy the migration plan to the Downloads directory
+4. Copy the migration plan to the Downloads directory
 
         cp ~/software/AMA/modresorts/modresorts-2_0_0_war.ear_migrationPlan.zip ~/Downloads/
 
@@ -940,9 +951,8 @@ Now you will use AMA Dev Tools to do the required code changes. AMA Dev Tools wi
 
             <kbd>![VSCode_TrustAuthor.png](./images/media/VSCode_TrustAuthor.png)</kbd>
 
-        3. If you see the panel to sign in for Copilot, select to continue without signin or close the panel.
+        3. If you see the panel to sign in for Copilot, close the panel.
         <kbd>![VSCode_Signup.png](./images/media/VSCode_Signup.png)</kbd>
-
 
 
     3. On the Welcome Panel you can open the Walkthrough which allows to change the VS Code settings like theme and other settings. 
