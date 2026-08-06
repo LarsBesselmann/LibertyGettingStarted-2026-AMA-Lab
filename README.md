@@ -2,11 +2,9 @@
 
 <kbd>![Toolbar_terminal](./images/media/AMA_Visualization_SampleData.png)</kbd>
 
-**Last updated:** July 2026 - Update to AMA v5
+**Last updated:** July 2026
 
 **Duration:** 90 minutes
-
-This lab is ready for testing.
 
 
 Need support? Contact **Lars Besselmann, Lars.Besselmann@de.ibm.com**
