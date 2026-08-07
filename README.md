@@ -17,7 +17,7 @@ This lab provides fundamental hands-on experience of the evaluation process of W
 
 You will also learn how to use the deployment accelerators that AMA generates to help deploy and run Java applications on Liberty and in containers.
 
-Upon completion of this lab, you will have gained experience using AMA to quickly analyze on-premises Java applications without accessing their source code, estimate the effort in moving to container-based clouds, and using TA’s deployment accelerators to accelerate your application modernization journey to Liberty and containers.
+Upon completion of this lab, you will have gained experience using AMA to quickly analyze on-premises Java applications without accessing their source code, estimate the effort in moving to container-based clouds, and using AMA’s deployment accelerators to accelerate your application modernization journey to Liberty and containers.
 
 The Application Modernization Accelerator provides the following value:
 
